@@ -1,0 +1,24 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+  {%- include head.html -%}
+
+  <body>
+
+    {%- include header.html -%}
+
+    <div class="mobilenav-backdrop" id="mobilenav-backdrop"></div>
+      <main class="wrapper">
+          {{ content }}
+      </main>
+    </div>
+
+    {%- include footer.html -%}
+
+  </body>
+
+</html>

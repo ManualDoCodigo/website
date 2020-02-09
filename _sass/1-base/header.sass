@@ -1,0 +1,20 @@
+header
+  margin-bottom: 3rem
+
+  .header-image
+    height: 30rem
+    margin-top: 6rem
+    background:
+      image: url(../img/header.jpg)
+      position: center
+      size: cover
+      repeat: no-repeat
+
+    @media (max-width: $tablet)
+      background:
+        image: url(../img/header-mobile.jpg)
+        position: center
+      margin-top: 0rem
+      height: 10rem
+      display: flex
+      align-items: center

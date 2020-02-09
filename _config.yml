@@ -1,0 +1,33 @@
+# Config file for Manual do Código
+
+title: Manual do Código
+author: Douglas Diniz
+
+baseurl: /
+url: "https://manualdocodigo.com.br"
+
+repository: ManualDoCodigo/website
+
+plugins:
+  - jekyll-feed
+
+sass: 
+  sass_dir: '_sass'
+  style: :compressed
+
+include: ['_pages']
+
+markdown: kramdown
+
+use_date_on_cards: false
+
+github_download_prefix: https://minhaskamal.github.io/DownGit/#/home?url=
+p5_web_editor_prefix: https://editor.p5js.org/ManualDoCodigo/sketches/
+p5_web_editor_fullscreen_prefix: https://editor.p5js.org/full/
+
+links:
+  youtube: https://www.youtube.com/channel/UClO5RbZy6nGl_CR7sE8nR_Q/
+  github: https://github.com/ManualDoCodigo/
+  instagram: https://www.instagram.com/manualdocodigo/
+  facebook: https://www.facebook.com/ManualDoCodigo/
+  twitter: https://twitter.com/TheCodeManual/

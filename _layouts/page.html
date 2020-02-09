@@ -1,0 +1,115 @@
+---
+layout: default
+---
+
+{% assign page_source_url_in_github = site.github.repository_url | append: '/tree/' | append: site.github.source.branch | append: '/pages_data/' | append: page.repository | append: '/src/' %}
+{% assign download_url = site.github_download_prefix | append: page_source_url_in_github %}
+
+{% if page.has_p5 == true %}
+  {% assign p5_webeditor_code_url = site.p5_web_editor_prefix | append: page.p5_code_id %}
+  {% assign p5_webeditor_full_url = site.p5_web_editor_fullscreen_prefix | append: page.p5_code_id %}
+{% endif %}
+
+<article class="page-wrapper">
+
+  <header class="page-header">
+    <h1 class="page-title">{{ page.title | escape }}</h1>
+  </header>
+
+  <div class="page_rule"></div>
+
+  <div class="youtube_and_code">
+    <div class="page_code_session">
+      {% if page.has_code == true %}
+        <h3>VÍDEO E LINKS</h3>
+      {% endif %}
+      <p><strong>Descrição: </strong>{{page.description}}</p>
+      {% if page.has_code == true %}
+        <h4>Código Fonte</h4>
+        <div class="page-buttons">        
+          <a href="{{ page_source_url_in_github }}" target="_blank">VER CÓDIGO</a>
+          <a class="page-button-yellow" href="{{ download_url }}" target="_blank">DOWNLOAD</a>
+        </div>
+        {% if page.has_p5 == true %}
+          <h4>Editor Web</h4>
+          <div class="page-buttons">        
+            <a class="page-button-green" href="{{ p5_webeditor_code_url }}" target="_blank">ABRIR EDITOR</a>
+            <a class="page-button-purple" href="{{ p5_webeditor_full_url }}" target="_blank">VER DEMO</a>
+          </div>
+        {% endif %}
+      {% endif %}
+    </div>
+
+    <div class="youtube_video">
+      <div id="video-player" class="video-player" data-videoid="{{ page.youtube_video_id }}">{{page.youtube_video_id}}</div>
+    </div>
+
+  </div>
+
+  <div class="page_rule"></div>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <div class="page-links">
+    {% if page.related_videos %}
+      <div class="page-links-block">
+        <h3>Vídeos Relacionados</h3>
+        
+          <ul>
+            {% for video in page.related_videos %}
+              <li>
+                <a href="{{video.url}}" target="_blank">{{video.title}}</a>
+                {% if video.author %}
+                  <i>por {{video.author}}</i>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+      </div>
+    {% endif %}
+
+    {% if page.reference_links %}
+      <div class="page-links-block">
+        <h3>Referências</h3>
+        
+          <ul>
+            {% for link in page.reference_links %}
+              <li>
+                <a href="{{link.url}}" target="_blank">{{link.title}}</a>
+                {% if link.author %}
+                  <i>por {{link.author}}</i>
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+      </div>
+    {% endif %}
+
+    {% if page.contributions %}
+      <div class="page-links-block">
+        <h3>Contribuições de outros programadores</h3>
+        
+          <ul>
+            {% for contribution in page.contributions %}
+              <li>
+                <a href="{{contribution.url}}" target="_blank">{{contribution.title}}</a>
+                {% if contribution.author %}
+                  <i>por</i>
+                  {% if contribution.personal_url %}
+                    <i><a href="{{contribution.personal_url}}" target="_blank">{{contribution.author}}</a></i>
+                  {% else %}
+                    <i>{{contribution.author}}</i>
+                  {% endif %}
+                {% endif %}
+              </li>
+            {% endfor %}
+          </ul>
+      </div>
+    {% endif %}
+
+  </div>
+
+
+</article>

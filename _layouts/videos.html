@@ -1,0 +1,60 @@
+---
+layout: default
+---
+{% assign videos = site.pages %}
+
+{% include tools/sort.html videos=videos %}
+
+    <div class="videos_wrapper">
+
+      <h2>VÍDEOS</h2>
+
+      <hr>
+
+      <div class="card-list">
+        <ul class="cards">
+
+          {% for page in out_sortedVideos %}
+            {% if page.type %}
+              <li>
+                <div class="card">
+                  <a href="{{page.url}}">
+                    <div class="card-header"> {% comment %} Video thumbnail. {% endcomment %}
+                      <div class="thumb-container">      
+                        <span class="card-badge">{{page.entry_number}}</span>    
+                        {% if page.thumb%}  
+                          <div class="card-thumbnail" style="background-image: url('/pages_data/{{page.repository}}/{{page.thumb}}')"></div>
+                        {% else %}
+                          <div class="card-thumbnail" style="background-image: url(https://i.ytimg.com/vi/{{page.youtube_video_id}}/mqdefault.jpg)"></div>
+                        {% endif %}
+                      </div>
+                
+                      <h3>{{page.title}}</h3>
+                
+                      {% if site.use_date_on_cards %}
+                        <span class="card-date">{{page.date}}</span>
+                      {% endif %}
+                    </div>
+                  </a>
+
+                  <div class="card-description">{% comment %} Short description/excerpt. {% endcomment %}
+                    {{page.description}}
+                  </div>
+
+                  <div class="buttons"> {% comment %} CTAs (link to YouTube and internal video page or livestream). {% endcomment %}
+
+                      <a class="youtube" href="https://youtu.be/{{page.youtube_video_id}}" target="blank">
+                        Assistir no YouTube<span class="sr-only">: {{ post.title | escape }}</span>
+                      </a>
+                      <a href="{{page.url}}" >
+                        Ir para Página</span>
+                      </a>
+                  </div>
+                </div>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+

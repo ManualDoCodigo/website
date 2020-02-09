@@ -1,0 +1,109 @@
+.page-wrapper
+  hr
+    margin-bottom: 40px
+
+.page-header
+  margin: 0
+  h1
+    font-size: 6rem
+
+  @media (max-width: $tablet-small)
+    h1
+        font-size: 4rem
+
+.page-title
+  margin: 0
+  margin-bottom: 2rem
+  text-align: center
+
+.page_rule
+  width: 100%
+  margin: 0 auto
+  height: 0.5rem
+  background: $mdc-blue
+  border-radius: 7px
+
+.youtube_and_code, .page-links
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: center
+  padding: 1em
+  background: #dddddd
+
+  @media (max-width: $tablet-big)
+    flex-direction: column
+
+  > div
+    flex-basis: calc(50% - 2em)
+    margin: 2em 0
+
+    @media (max-width: $tablet-big)
+      flex-basis: auto
+      margin: 1em 0
+      width: 100%
+  
+  .youtube_video
+    text-align: center
+    margin: 0
+
+    .video-player
+      width: 55rem
+      height: 55rem * 9 / 16
+
+      @media (max-width: $tablet-small)
+        width: 100%
+        height: calc(100vw * 9 / 16 - 2rem)
+
+  .page_code_session
+    margin: 0
+    
+    @media (max-width: $tablet-big)
+        margin-bottom: 2.5rem
+    
+    h3
+        font-size: 3rem
+        text-align: center
+        margin: 0
+    
+    h4
+        font-size: 2rem
+        font-weight: bolder
+        text-align: center
+        margin: 1rem 0
+
+
+    .page-buttons
+        display: flex
+        justify-content: space-between
+
+        @media (max-width: $mobile)
+            flex-wrap: wrap
+
+        a
+            @extend .button-base
+            @include text-style('title')
+            font-size: 1.8rem
+            letter-spacing: 0.06em
+            flex: 1
+            background: $mdc-blue
+            color: #FFF
+            margin-right: 0.5em
+
+            @media (max-width: $mobile)
+                font-size: 1.3rem
+
+        .page-button-yellow
+            background: $mdc-yellow
+            color: #000
+        
+        .page-button-green
+            background: $mdc-green
+
+        .page-button-purple
+            background: $mdc-purple
+
+.page-links
+  background: #ffffff
+  align-items: flex-start
+
