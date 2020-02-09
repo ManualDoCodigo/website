@@ -1,0 +1,69 @@
+.home_wrapper
+  h2
+    margin: 0
+    text-align: center
+    font-size: 5rem
+    font-weight: bold
+  
+  .welcome-block
+    align-items: center
+    display: flex
+    justify-content: space-around
+
+    @media (max-width: $tablet-small)
+      flex-wrap: wrap
+
+    .presentation
+      width: 40%
+
+      @media (max-width: $tablet-small)
+        width: 100%
+        text-align: center
+
+      h1
+        margin: 0
+
+        @media (max-width: $tablet-big)
+            margin-bottom: 0.5em
+
+        @media (max-width: $tablet-small)
+            font-size: 4rem
+    
+    .social-medias
+      width: 40%
+
+      @media (max-width: $tablet-small)
+        width: 100%
+        text-align: center
+        margin-top: 1.5em
+
+    .social-medias-links
+      margin-top: 1.8em
+
+      @media (max-width: $tablet-small)
+        margin-top: 0
+
+      @media (max-width: $tablet-big)
+        text-align: center
+
+      @media (max-width: $mobile)
+        display: inline-block
+
+      a
+        @include text-style('title')
+        font-weight: normal
+        font-size: 3rem
+        width: 100%
+        color: #FFF
+        margin-right: 1em
+        margin-bottom: 0.5em
+
+        @media (max-width: $tablet-big)
+          width: 80%
+          max-width: 35rem
+          margin: 0.5em
+
+        @media (max-width: $mobile)
+          width: 100%
+          margin: 0.5em 0
+

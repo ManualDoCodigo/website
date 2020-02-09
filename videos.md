@@ -1,0 +1,4 @@
+---
+layout: videos
+permalink: /videos/
+---

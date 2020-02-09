@@ -1,0 +1,102 @@
+
+*
+  box-sizing: border-box
+
+html, body
+  margin: 0
+  padding: 0
+
+
+\:root
+  font-size: 10px
+
+  @media (max-width: $desktop)
+    font-size: 9px
+
+  @media (max-width: $laptop)
+    font-size: 8px
+
+  @media (max-width: $tablet-big)
+    font-size: 9px
+
+  @media (max-width: $tablet)
+    font-size: 8px
+
+  @media (max-width: $tablet-small)
+    font-size: 10px
+
+.wrapper
+  max-width: 115rem
+  margin: 0 auto
+  padding: 0 2rem
+
+.sr-only
+  position: absolute
+  height: 1px
+  width: 1px
+  clip: rect(1px 1px 1px 1px) // IE 6 and 7
+  clip: rect(1px,1px,1px,1px)
+  clip-path: polygon(0px 0px, 0px 0px, 0px 0px)
+  -webkit-clip-path: polygon(0px 0px, 0px 0px, 0px 0px)
+  overflow: hidden !important
+
+@mixin text-style($type)
+  @if $type == 'title'
+    font-family: $title-text
+    letter-spacing: $title-text-letter-spacing
+  @else if $type == 'body'
+    font-family: $body-text
+    letter-spacing: $body-text-letter-spacing
+    line-height: $body-text-line-height
+
+
+
+
+
+html, body
+  @include text-style('body')
+  color: $text-color
+  font-size: 1.6rem
+
+img
+  width: 100%
+  height: auto
+  display: block
+  margin-left: auto
+  margin-right: auto
+
+
+h1, h2, h3, h4, h5, h6,
+button
+  @include text-style('title')
+  font-weight: normal
+
+h1
+  font-size: 6rem
+
+h2
+  font-size: 3rem
+  padding-top: 1em
+  text-align: center
+
+h3
+  font-size: 2.5rem
+
+.subtitle
+  text-align: center
+  margin: -1.25em 0em 2em
+  @include text-style('title')
+  font-size: 1.8rem
+
+highlight
+  color: $mdc-blue
+  font-weight: bold
+
+
+.text-red
+  color: $mdc-red
+  font-weight: bold
+  font-size: 1.8rem
+
+
+
