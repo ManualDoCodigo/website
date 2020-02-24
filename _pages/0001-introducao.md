@@ -5,7 +5,7 @@ date: 2020-01-29
 type: video
 description: Este é o primeiro vídeo do canal. Neste vídeo eu me apresento e falo um pouco do canal e do site.
 entry_number: 1
-youtube_video_id: fJ9rUzIMcZQ
+youtube_video_id: Ht-7ooVDOMA
 repository: 0001-Introducao
 thumb: thumb.jpg
 has_code: false
