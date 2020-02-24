@@ -8,6 +8,8 @@ url: "https://manualdocodigo.com.br"
 
 repository: ManualDoCodigo/website
 
+google_analytics: UA-158919587-1
+
 plugins:
   - jekyll-feed
 
