@@ -5,7 +5,7 @@ date: 2020-02-04
 type: video
 description: Por que os programadores usam números no formato hexadecimal? Não complica mais? Essas são dúvidas comuns para quem está começando.
 entry_number: 3
-youtube_video_id: fJ9rUzIMcZQ
+youtube_video_id: 5AuFecbTykk
 repository: 0003-hexadecimais
 has_code: false
 has_p5: false
