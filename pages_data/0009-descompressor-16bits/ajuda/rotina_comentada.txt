@@ -1,0 +1,137 @@
+//Rotina comentada. Pode conter erros, pois os comentários foram feitos durante a implementação,
+//então pode ser que algum comentário não foi revisado e está errado. Faz parte do desafio :D
+
+ROM:3820 sub_3820:                               
+ROM:3820                                         
+ROM:3820                 movem.l d0-d2/a2,-(sp)
+ROM:3824                 tst.b   2(a0)
+ROM:3828                 beq.w   loc_38D0
+
+
+
+ROM:382C
+ROM:382C loc_382C:                               
+//Salvar o endereço do byte comprimido
+ROM:382C                 move.l  a0,d1
+//Os primeiros 2 bytes são juntados em um word little endian e somado no endereço salvo anteriormente.
+//Parece ser o tamanho do gráfico comprimido.
+ROM:382E                 moveq   #0,d2
+ROM:3830                 move.b  (a0)+,d2
+ROM:3832                 move.b  (a0)+,d0
+ROM:3834                 lsl.w   #8,d0
+ROM:3836                 or.w    d0,d2
+ROM:3838                 add.l   d1,d2
+ROM:383A
+
+
+
+ROM:383A loc_383A:                              
+ROM:383A                                         
+//Aqui vemos se já chegamos no final do arquivo, comparando o endereço atual com o endereço final, calculado anteriormente.
+ROM:383A                 cmpa.l  d2,a0
+ROM:383C                 beq.w   loc_38C4
+//Pega um byte comprimido. Este é um byte de controle
+ROM:3840                 moveq   #0,d0
+ROM:3842                 move.b  (a0)+,d0
+//Checa os bits e pula para as partes correspondentes.
+ROM:3844                 bclr    #7,d0
+ROM:3848                 bne.w   loc_3886
+ROM:384C                 bclr    #6,d0
+ROM:3850                 bne.w   loc_386C
+//Se o bit 5 for setado, pega-se o próximo byte e usa-se como contador, junto com os 4 bits do D0 atual shiftado 8 pra esquerda.
+//Se o bit 5 não for setado, usa-se apenas os 4 bits menos significativos atuais. Isso dá no máximo 16 bytes, porém ganha-se um byte, 
+//pois não precisa pegar um byte na sequência.
+ROM:3854                 bclr    #5,d0
+ROM:3858                 beq.w   loc_3860
+ROM:385C                 lsl.w   #8,d0
+ROM:385E                 move.b  (a0)+,d0
+
+
+
+//Aqui copia os bytes descomprimidos, usando o D0 como contador.
+ROM:3860
+ROM:3860 loc_3860:                              
+ROM:3860                 subq.w  #1,d0
+ROM:3862
+ROM:3862 loc_3862:                              
+ROM:3862                 move.b  (a0)+,(a1)+
+ROM:3864                 dbf     d0,loc_3862
+ROM:3868                 bra.w   loc_383A
+
+
+---------------------------------------------------------------------------
+//Caso do Bit 6
+//Neste caso iremos pegar o contador e repetir o próximo byte usando este contador.
+//Caso o bit 4 do byte de controle for setado devemos pegar o próximo byte como contador, somando 
+//com os 3 primeiros bits da byte de controle. Caso contrário usamos apenas os 3 primeiros bits como
+//contador. Somamos 4 no contador pois só faz sentido se tivermos que repetir 4 ou mais bytes.
+ROM:386C
+ROM:386C loc_386C:                               
+ROM:386C                 bclr    #4,d0
+ROM:3870                 beq.w   loc_3878
+ROM:3874                 lsl.w   #8,d0
+ROM:3876                 move.b  (a0)+,d0
+ROM:3878
+ROM:3878 loc_3878:                              
+ROM:3878                 addq.w  #3,d0
+ROM:387A                 move.b  (a0)+,d1
+ROM:387C
+ROM:387C loc_387C:                               
+ROM:387C                 move.b  d1,(a1)+
+ROM:387E                 dbf     d0,loc_387C
+ROM:3882                 bra.w   loc_383A
+
+
+
+---------------------------------------------------------------------------
+//Caso do Bit 7
+ROM:3886
+ROM:3886 loc_3886:                               
+//Salva o D0 em D1. Pega os bits 6 e 7 e joga pro início do byte e soma 4. Isso é um contador.
+ROM:3886                 move.l  d0,d1
+ROM:3888                 andi.b  #$60,d0
+ROM:388C                 rol.b   #3,d0
+ROM:388E                 addi.w  #3,d0
+//Pega o restante dos bits (os 5 primeiros), shifteia 8 pra esquerda e soma com o próximo byte.
+//Isso vai dar um contador.
+ROM:3892                 andi.b  #$1F,d1
+ROM:3896                 lsl.w   #8,d1
+ROM:3898                 move.b  (a0)+,d1
+//Subtrai esse contador do endereço atual de descompressão e guarda em A2.
+ROM:389A                 movea.l a1,a2
+ROM:389C                 suba.l  d1,a2
+//Usa o contador em D0 pra copiar os bytes já descomprimidos no passado.
+ROM:389E
+ROM:389E loc_389E:                               
+ROM:389E                                         
+ROM:389E                 move.b  (a2)+,(a1)+
+ROM:38A0                 dbf     d0,loc_389E
+
+//Pega o próximo byte de controle e faz uma máscara com 0xe0. Se for igual a 0x60 então continuamos
+//neste método.
+ROM:38A4                 move.b  (a0),d1
+ROM:38A6                 andi.b  #$E0,d1
+ROM:38AA                 cmpi.b  #$60,d1 
+//Se não for 0x60 volta pro início pra continuar
+ROM:38AE                 bne.w   loc_383A
+//Pode ser 0x60 mas pode ter terminado, então checamos aqui.
+ROM:38B2                 cmpa.l  d2,a0
+ROM:38B4                 beq.w   loc_38C4
+
+//Continuamos copiando de onde A2 parou, usando o próximo byte como contador.
+ROM:38B8                 move.b  (a0)+,d0
+ROM:38BA                 andi.w  #$1F,d0
+ROM:38BE                 subq.b  #1,d0
+ROM:38C0                 bra.w   loc_389E
+
+
+
+ROM:38C4 ; ---------------------------------------------------------------------------
+ROM:38C4
+ROM:38C4 loc_38C4:                              
+ROM:38C4                                        
+ROM:38C4                 move.b  (a0)+,d0
+ROM:38C6                 bne.w   loc_382C
+ROM:38CA                 movem.l (sp)+,d0-d2/a2
+ROM:38CE                 rts
+ROM:38D0 ; ---------------------------------------------------------------------------

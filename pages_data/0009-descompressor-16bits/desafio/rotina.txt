@@ -1,0 +1,93 @@
+//No ínicio da rotina o registrador A0 contém o endereço do gráfico a ser descomprimido.
+//No caso deste vídeo o endereço é 0x16943c.
+//O registrador A1 contém o endereço da RAM onde os gráficos descomprimidos devem ser colocados.
+
+ROM:3820
+ROM:3820 ; =============== S U B R O U T I N E =======================================
+ROM:3820
+ROM:3820
+ROM:3820 sub_3820:                               
+ROM:3820                                         
+ROM:3820                 movem.l d0-d2/a2,-(sp)
+ROM:3824                 tst.b   2(a0)
+ROM:3828                 beq.w   loc_38D0
+ROM:382C
+ROM:382C loc_382C:                               
+ROM:382C                 move.l  a0,d1
+ROM:382E                 moveq   #0,d2
+ROM:3830                 move.b  (a0)+,d2
+ROM:3832                 move.b  (a0)+,d0
+ROM:3834                 lsl.w   #8,d0
+ROM:3836                 or.w    d0,d2
+ROM:3838                 add.l   d1,d2
+ROM:383A
+ROM:383A loc_383A:                               
+ROM:383A                                        
+ROM:383A                 cmpa.l  d2,a0
+ROM:383C                 beq.w   loc_38C4
+ROM:3840                 moveq   #0,d0
+ROM:3842                 move.b  (a0)+,d0
+ROM:3844                 bclr    #7,d0
+ROM:3848                 bne.w   loc_3886
+ROM:384C                 bclr    #6,d0
+ROM:3850                 bne.w   loc_386C
+ROM:3854                 bclr    #5,d0
+ROM:3858                 beq.w   loc_3860
+ROM:385C                 lsl.w   #8,d0
+ROM:385E                 move.b  (a0)+,d0
+ROM:3860
+ROM:3860 loc_3860:                               
+ROM:3860                 subq.w  #1,d0
+ROM:3862
+ROM:3862 loc_3862:                               
+ROM:3862                 move.b  (a0)+,(a1)+
+ROM:3864                 dbf     d0,loc_3862
+ROM:3868                 bra.w   loc_383A
+ROM:386C
+ROM:386C loc_386C:                               
+ROM:386C                 bclr    #4,d0
+ROM:3870                 beq.w   loc_3878
+ROM:3874                 lsl.w   #8,d0
+ROM:3876                 move.b  (a0)+,d0
+ROM:3878
+ROM:3878 loc_3878:                               
+ROM:3878                 addq.w  #3,d0
+ROM:387A                 move.b  (a0)+,d1
+ROM:387C
+ROM:387C loc_387C:                               
+ROM:387C                 move.b  d1,(a1)+
+ROM:387E                 dbf     d0,loc_387C
+ROM:3882                 bra.w   loc_383A
+ROM:3886
+ROM:3886 loc_3886:                               
+ROM:3886                 move.l  d0,d1
+ROM:3888                 andi.b  #$60,d0
+ROM:388C                 rol.b   #3,d0
+ROM:388E                 addi.w  #3,d0
+ROM:3892                 andi.b  #$1F,d1
+ROM:3896                 lsl.w   #8,d1
+ROM:3898                 move.b  (a0)+,d1
+ROM:389A                 movea.l a1,a2
+ROM:389C                 suba.l  d1,a2
+ROM:389E
+ROM:389E loc_389E:                               
+ROM:389E                                         
+ROM:389E                 move.b  (a2)+,(a1)+
+ROM:38A0                 dbf     d0,loc_389E
+ROM:38A4                 move.b  (a0),d1
+ROM:38A6                 andi.b  #$E0,d1
+ROM:38AA                 cmpi.b  #$60,d1
+ROM:38AE                 bne.w   loc_383A
+ROM:38B2                 cmpa.l  d2,a0
+ROM:38B4                 beq.w   loc_38C4
+ROM:38B8                 move.b  (a0)+,d0
+ROM:38BA                 andi.w  #$1F,d0
+ROM:38BE                 subq.b  #1,d0
+ROM:38C0                 bra.w   loc_389E
+ROM:38C4
+ROM:38C4 loc_38C4:                               
+ROM:38C4                                         
+ROM:38C4                 move.b  (a0)+,d0
+ROM:38C6                 bne.w   loc_382C
+ROM:38CA                 movem.l (sp)+,d0-d2/a2
+ROM:38CE                 rts
