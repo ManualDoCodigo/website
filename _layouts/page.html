@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% assign page_source_url_in_github = site.github.repository_url | append: '/tree/' | append: site.github.source.branch | append: '/pages_data/' | append: page.repository | append: '/src/' %}
+{% assign page_source_url_in_github = site.github.repository_url | append: '/tree/' | append: site.github.source.branch | append: '/pages_data/' | append: page.repository %}
 {% assign download_url = site.github_download_prefix | append: page_source_url_in_github %}
 
 {% if page.has_p5 == true %}
