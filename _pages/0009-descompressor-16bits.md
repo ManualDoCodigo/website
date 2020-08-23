@@ -9,6 +9,7 @@ youtube_video_id: uk2IcRpevYE
 repository: 0009-descompressor-16bits
 has_code: true
 has_p5: false
-tags: [Algoritmos,Desafios,Python]
+tags: [Algoritmos, Desafios, Python, Romhacking, Compressão, Assembly, Mega Drive]
+playlists: [Desafios]
 permalink: /descompressor-16bits/
 ---
