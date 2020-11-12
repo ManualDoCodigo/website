@@ -10,7 +10,13 @@ repository: 0003-hexadecimais
 has_code: false
 has_p5: false
 tags: [Fundamentos, Teoria]
+playlists: [Fundamentos da Computação]
 permalink: /hexadecimais/
+
+reference_links:
+  - title: "Code: The Hidden Language of Computer Hardware and Software"
+    author: Chales Petzold
+    url: "https://amzn.to/3hr28gP"
 
 related_videos:
   - title: "Por que computadores usam Binário?"
@@ -51,7 +57,7 @@ Você já parou pra pensar por que usamos o sistema decimal? Por que contamos at
 simplifica muito usarmos o sistema decimal pois podemos usar os dedos pra ajudar nas contas.  
 Isso parece muito estranho, mas é estranho pois estamos imersos nesse sistema desde que nascemos e é o natural para o nosso cérebro.  
 Se tivéssemos quatro dedos em cada mão usaríamos o sistema octal e isso seria o natural pra gente.  
-Uma discussão completa sobre esse assunto fica muito longa de se colocar aqui, então recomento o [livro CODE do Charles Petzold](https://www.amazon.com.br/Code-Charles-Petzold/dp/0735611319){:target="_blank"}. Esse livro detalha muito bem todo o assunto desta página e muito mais. Este livro é obrigatório para todos os programadores!
+Uma discussão completa sobre esse assunto fica muito longa de se colocar aqui, então recomento o [livro CODE do Charles Petzold](https://amzn.to/3hr28gP){:target="_blank"}. Esse livro detalha muito bem todo o assunto desta página e muito mais. Este livro é obrigatório para todos os programadores!
 
 ### Formato dos números hexadecimais
 
