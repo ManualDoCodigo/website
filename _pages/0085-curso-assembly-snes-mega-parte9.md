@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "O que são INSTRUÇÕES em um PROCESSADOR? Curso de Assembly. Parte 8"
+title: "O que são INSTRUÇÕES em um PROCESSADOR? Curso de Assembly. Parte 9"
 date: 2020-08-14
 type: video
 description: Neste vídeo eu explico o que são instruções em um processador e já começo a entrar na parte do Assembly do Snes e do Mega Drive. Mostro os debuggers que iremos usar em cada sistema e explico os detalhes de algumas instruções.
