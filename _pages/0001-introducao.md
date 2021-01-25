@@ -89,7 +89,7 @@ Se inscreva no canal do YouTube clicando no botão abaixo:
                 <div class="social-medias-links">
                     <div><a href="{{site.links.youtube}}" target="_blank" class="button-base youtube-small">YouTube</a></div>
                     <div><a href="{{site.links.github}}" target="_blank" class="button-base github">Github</a></div>
-                    <div><a href="{{site.links.twitter}}" target="_blank" class="button-base twiter">Twiter</a></div>
+                    <div><a href="{{site.links.twitter}}" target="_blank" class="button-base twiter">Twitter</a></div>
                     <div><a href="{{site.links.facebook}}" target="_blank" class="button-base facebook">Facebook</a></div>
                     <div><a href="{{site.links.instagram}}" target="_blank" class="button-base instagram">Instagram</a></div>
                 </div>
