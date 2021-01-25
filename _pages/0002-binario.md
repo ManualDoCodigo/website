@@ -10,11 +10,13 @@ repository: 0002-binario
 has_code: false
 has_p5: false
 tags: [Fundamentos, Teoria, Binário, Baixo Nível]
+playlists: [Fundamentos da Computação]
 permalink: /binario/
 
 reference_links:
-  - title: "Livro CODE, de Chales Petzold"
-    url: "https://www.amazon.com.br/Code-Charles-Petzold/dp/0735611319"
+  - title: "Code: The Hidden Language of Computer Hardware and Software"
+    author: Chales Petzold
+    url: "https://amzn.to/3hr28gP"
 ---
 
 ### Introdução
@@ -37,7 +39,7 @@ Nas demais seções trabalharemos mais esse assunto.
 Você já se perguntou o motivo de usarmos o sistema decimal no nosso dia a dia? Por que contamos até 10?  
 A resposta é porque temos 10 dedos nas mãos, então os sistema decimal é mais natural para a nossa intuição. Se tivéssemos 4 dedos em cada mão usaríamos o
 sistema octal ao invés do decimal.
-Uma discussão completa sobre esse assunto fica muito longa de se colocar aqui, então recomento o [livro CODE do Charles Petzold](https://www.amazon.com.br/Code-Charles-Petzold/dp/0735611319){:target="_blank"}.
+Uma discussão completa sobre esse assunto fica muito longa de se colocar aqui, então recomento o [livro CODE do Charles Petzold](https://amzn.to/3hr28gP){:target="_blank"}.
 Esse livro detalha muito bem todo o assunto desta página e muito mais. Este livro é obrigatório para todos os programadores, tanto iniciantes como avançados!  
 Esse conceito do motivo de usarmos decimal no nosso dia a dia e na nossa matemática é importante para entendermos a razão de usarmos binário.
 
@@ -73,7 +75,7 @@ tem suporte ao sistema decimal.
 
 Espero que este artigo tenha ajudado a entender um pouco sobre a razão de usarmos o sistema binário. O domínio deste tema leva um bom tempo pra entrar na mente, 
 então sempre que possível leia e assista vídeos sobre o assunto para ver diferentes argumentos e exemplos sobre este tema. Como já disse no início, recomendo 
-o [livro CODE do Charles Petzold](https://www.amazon.com.br/Code-Charles-Petzold/dp/0735611319){:target="_blank"}.
+o [livro CODE do Charles Petzold](https://amzn.to/3hr28gP){:target="_blank"}.
 
 
 
