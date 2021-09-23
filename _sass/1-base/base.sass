@@ -5,7 +5,7 @@
 html, body
   margin: 0
   padding: 0
-
+  background-color: #0d1117
 
 \:root
   font-size: 10px
@@ -50,9 +50,6 @@ html, body
     line-height: $body-text-line-height
 
 
-
-
-
 html, body
   @include text-style('body')
   color: $text-color
@@ -64,7 +61,6 @@ img
   display: block
   margin-left: auto
   margin-right: auto
-
 
 h1, h2, h3, h4, h5, h6,
 button
@@ -81,6 +77,10 @@ h2
 
 h3
   font-size: 2.5rem
+  background-color: rgba(237,199,99,0)
+  padding: 6px 10px 0px 10px
+  border-radius: 5px
+  color: #58a6ff
 
 .subtitle
   text-align: center
@@ -92,11 +92,19 @@ highlight
   color: $mdc-blue
   font-weight: bold
 
-
 .text-red
   color: $mdc-red
   font-weight: bold
   font-size: 1.8rem
 
+a:link
+  color: #edc763
 
+a:visited
+  color: #fb617e
 
+a:hover
+  color: #fff
+
+a:active
+  color: #f89860

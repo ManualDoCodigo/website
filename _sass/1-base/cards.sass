@@ -1,13 +1,14 @@
 .card
   $padding: 2rem
   width: 35rem
-  box-shadow: 0 10px 20px $box-shadow-primary, 0 6px 6px $box-shadow-secondary
+  box-shadow: 0 0 0px $box-shadow-primary, 0 0 0px $box-shadow-secondary
   padding-bottom: 1em
   border-radius: $standard-border-radius
   overflow: hidden
   margin: 3rem 0rem
-  background: #CCDBDC
-  border: 1px solid #ddd
+  background: #21262d
+  border: 0px solid #ddd
+  color: $text-color
 
   display: flex
   flex-direction: column
@@ -20,7 +21,7 @@
 
   > a
     text-decoration: none
-    color: $text-color
+    color: #58a6ff
 
   .card-header
 
@@ -33,7 +34,7 @@
         position: absolute
         right: 0
         bottom: 0
-        background: #2F7F47
+        background: #238636
         color: #f0f0f0
         @include text-style('title')
         font-size: 2rem
@@ -74,13 +75,16 @@
     @media (max-width: $mobile)
       flex-wrap: wrap
 
+    .youtube-card
+      background: #fb617e
+
     a
       @extend .button-base
       @include text-style('title')
       font-weight: normal
       font-size: 1.7rem
-      background: #0175cc
-      color: #FFF
+      background: #7e8294
+      color: #21262d
       flex-grow: 2
       margin-left: 0.25em
       margin-right: 0.25em

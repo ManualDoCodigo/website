@@ -20,6 +20,11 @@ sass:
 include: ['_pages']
 
 markdown: kramdown
+highlighter: rouge
+
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
 use_date_on_cards: false
 
