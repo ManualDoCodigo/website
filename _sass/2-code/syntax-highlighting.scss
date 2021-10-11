@@ -88,14 +88,20 @@
 .highlight .vm                { color: #f8f8f2 }                              /* Name.Variable.Magic         */
 .highlight .il                { color: #bb97ee }                              /* Literal.Number.Integer.Long */
 
-pre, code {
+pre {
     font-family: 'Roboto Mono', monospace;
     margin: 0;
 }
 
+code {
+    font-family: 'Roboto Mono', monospace;
+    margin: 0;
+    color: #edc763;
+}
+
 pre {
 word-wrap: normal;
-background-color: #21262d;
+background-color: rgba(33, 38, 45, 0.6);
 }
 
 figure {
@@ -111,13 +117,16 @@ pre.highlight {
 padding: 1em;
 }
 
+.highlight pre {
+    
+}
+
 .lineno {
 padding: .5em;
 background-color: #6dcae8;
 font-weight: bold;
 text-align: right;
+color: #2b2d3a;
 }
 
-.highlight pre {
-    color: #2b2d3a;    
-}
+

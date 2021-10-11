@@ -5,7 +5,11 @@
 html, body
   margin: 0
   padding: 0
-  background-color: #0d1117
+  background-image: url("../img/back15.jpg")
+  background-repeat: no-repeat
+  background-attachment: fixed
+  background-position: center
+  background-size: cover
 
 \:root
   font-size: 10px
@@ -56,7 +60,7 @@ html, body
   font-size: 1.6rem
 
 img
-  width: 100%
+  max-width: 100%
   height: auto
   display: block
   margin-left: auto
@@ -72,12 +76,15 @@ h1
 
 h2
   font-size: 3rem
-  padding-top: 1em
+  margin-top: 2em
   text-align: center
+  color: #c9d1d9
+  border-radius: 5px
+  background-color: rgba(109, 202, 232, 0.2)
 
 h3
   font-size: 2.5rem
-  background-color: rgba(237,199,99,0)
+  background-color: rgba(255,199,99,0)
   padding: 6px 10px 0px 10px
   border-radius: 5px
   color: #58a6ff
@@ -108,3 +115,13 @@ a:hover
 
 a:active
   color: #f89860
+
+p
+  em
+    color: yellow
+
+  strong
+    color: red
+
+    em
+      color: red
