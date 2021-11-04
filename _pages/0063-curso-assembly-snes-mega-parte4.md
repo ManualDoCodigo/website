@@ -12,6 +12,11 @@ has_p5: false
 tags: [Assembly, Snes, Mega Drive, Romhacking, Transistor]
 playlists: [Curso de Assembly com Snes e Mega Drive]
 permalink: /curso-assembly-snes-mega-parte4/
+
+contributions:
+  - title: "Adicione sua contribuição fazendo um pull request"
+    author: "Seu Nome"
+    url: "/contribuacomosite/"
 ---
 
 ## Introdução
