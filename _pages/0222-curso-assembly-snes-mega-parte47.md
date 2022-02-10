@@ -101,15 +101,15 @@ As últimas versões você consegue baixar nos repositórios do *Github*.
 
 O *Bsnes-v086* você encontrar no link:
 
-[https://github.com/ManualDoCodigo/debugger-snes](https://github.com/ManualDoCodigo/debugger-snes)
+[https://github.com/Dgdiniz/bsnes_v086-source](https://github.com/Dgdiniz/bsnes_v086-source)
 
 O *Bsnes-Plus* você encontrar no link:
 
-[https://github.com/ManualDoCodigo/bsnes-plus](https://github.com/ManualDoCodigo/bsnes-plus)
+[https://github.com/Dgdiniz/bsnes-plus](https://github.com/Dgdiniz/bsnes-plus)
 
 O *Exodus* você encontrar no link:
 
-[https://github.com/ManualDoCodigo/Exodus](https://github.com/ManualDoCodigo/Exodus)
+[https://github.com/Dgdiniz/Exodus](https://github.com/Dgdiniz/Exodus)
 
 Após baixar todos os arquivos, descompacte nas pastas *debuggers* de cada sistema. O nome aqui é importante, pois os scripts que fazem os builds acessam já considerando que os caminhos estão corretos. Para tirar a dúvida assista o vídeo do episódio ou acesse os scripts de build em cada pasta tutorial ou projeto para ver o caminho correto. Os arquivos compactados já contém internamente a pasta raiz com o nome correto.
 
