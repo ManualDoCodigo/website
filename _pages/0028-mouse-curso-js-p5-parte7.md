@@ -11,6 +11,7 @@ has_code: false
 has_p5: true
 p5_code_id: LO5ovkJNl
 tags: [Curso Javascript, P5, Mouse]
+playlists: [Curso de JavaScript com P5.js]
 permalink: /curso-javascript-p5-7/
 
 reference_links:
