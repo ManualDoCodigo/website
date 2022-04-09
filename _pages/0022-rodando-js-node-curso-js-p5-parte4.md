@@ -10,6 +10,6 @@ repository: 0022-rodando-js-node-curso-js-p5-parte4
 has_code: false
 has_p5: false
 tags: [Curso Javascript, P5, Node.js]
-playlists: [Curso JavaScript com P5.js]
+playlists: [Curso de JavaScript com P5.js]
 permalink: /curso-javascript-p5-4/
 ---
