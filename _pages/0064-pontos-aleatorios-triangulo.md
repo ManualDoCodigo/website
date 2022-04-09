@@ -11,7 +11,7 @@ has_code: false
 has_p5: true
 p5_code_id: mU6VcITEw
 tags: [Algoritmo, Random, Triângulo]
-playlists: [Algoritmos]
+playlists: [Mini-Projetos e Algoritmos]
 permalink: /pontos-aleatorios-triangulo/
 ---
 
