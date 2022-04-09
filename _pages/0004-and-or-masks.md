@@ -10,6 +10,7 @@ repository: 0004-and-or-masks
 has_code: false
 has_p5: false
 tags: [Fundamentos, Teoria]
+playlists: [Fundamentos da Computação]
 permalink: /binarymasks/
 
 related_videos:
