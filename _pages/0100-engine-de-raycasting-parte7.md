@@ -6,7 +6,7 @@ type: video
 description: Neste vídeo eu explico sobre o loop principal da engine e adiciono no código o loop que vai calcular os raios e fazer os desenhos na tela.
 entry_number: 100
 youtube_video_id: TZi2oViVRMI
-repository: 0100-wolfenstein3d-engine-raycasting-parte7
+repository: 0100-engine-de-raycasting-parte7
 has_code: false
 has_p5: true
 p5_code_id: 4kACdwyH1
