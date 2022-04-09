@@ -10,6 +10,7 @@ repository: 0027-funcoes-curso-js-p5-parte6
 has_code: false
 has_p5: false
 tags: [Curso Javascript, P5, Funções]
+playlists: [Curso de JavaScript com P5.js]
 permalink: /curso-javascript-p5-6/
 
 reference_links:
