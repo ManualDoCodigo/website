@@ -10,6 +10,7 @@ repository: 0030-variaveis-booleanas-curso-js-p5-parte8
 has_code: false
 has_p5: false
 tags: [Curso Javascript, P5, Mouse]
+playlists: [Curso de JavaScript com P5.js]
 permalink: /curso-javascript-p5-8/
 
 reference_links:
