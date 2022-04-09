@@ -10,6 +10,6 @@ repository: 0042-compressor-rle-python
 has_code: false
 has_p5: false
 tags: [Compressão,Compressor,RLE,Python]
-playlists: [Algoritmos]
+playlists: [Mini-Projetos e Algoritmos]
 permalink: /compressor-rle-python/
 ---
