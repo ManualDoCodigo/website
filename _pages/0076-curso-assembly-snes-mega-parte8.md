@@ -19,7 +19,7 @@ permalink: /curso-assembly-snes-mega-parte8/
 
 <img src="/pages_data/{{page.repository}}/register1.jpg" style="width:80%;"/>
 
-<img src="/pages_data/{{page.repository}}/register2.jpg" style="width:50%;"/>
+<img src="/pages_data/{{page.repository}}/register2.jpg" style="width:80%;"/>
 
 <img src="/pages_data/{{page.repository}}/register3.jpg" style="width:50%;"/>
 
