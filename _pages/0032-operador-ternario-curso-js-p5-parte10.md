@@ -11,5 +11,6 @@ has_code: false
 has_p5: true
 p5_code_id: lEjtxd7tY
 tags: [Curso Javascript, P5, Operador Ternário]
+playlists: [Curso de JavaScript com P5.js]
 permalink: /curso-javascript-p5-10/
 ---
