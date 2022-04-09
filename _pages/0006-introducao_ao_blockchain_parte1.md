@@ -10,6 +10,7 @@ repository: 0006-blockchain-intro1
 has_code: false
 has_p5: false
 tags: [Criptomoedas]
+playlists: [Blockchain]
 permalink: /blockchain-intro-1/
 
 related_videos:
