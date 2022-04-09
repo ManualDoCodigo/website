@@ -10,6 +10,7 @@ repository: 0010-numero-unico-array-pares
 has_code: true
 has_p5: false
 tags: [Algoritmos,Questões de Entrevista,Python]
+playlists: [Questões de Entrevista]
 permalink: /numero-unico-array-pares/
 
 related_videos:
