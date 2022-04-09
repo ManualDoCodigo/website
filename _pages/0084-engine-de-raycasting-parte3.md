@@ -6,7 +6,7 @@ type: video
 description: Esta é a terceira parte desta série onde implemento uma engine de Raycasting. Neste vídeo explico mais a fundo como o Raycasting funciona e dou os passos iniciais na estrutura do projeto.
 entry_number: 84
 youtube_video_id: jwpaf8Ojzu0
-repository: 0084-wolfenstein3d-engine-raycasting-parte3
+repository: 0084-engine-de-raycasting-parte3
 has_code: false
 has_p5: true
 p5_code_id: i_aRKcrQ8
