@@ -11,6 +11,6 @@ has_code: false
 has_p5: true
 p5_code_id: _RLaraewW
 tags: [Fractal]
-playlists: [Desafios]
+playlists: [Mini-Projetos e Algoritmos]
 permalink: /arvore-fractal/
 ---
