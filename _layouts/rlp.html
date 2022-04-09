@@ -1,0 +1,62 @@
+---
+layout: default
+---
+
+{% assign videos = site.pages %}
+{% assign i = 1 %}
+
+{% include tools/sort.html videos=videos %}
+
+{% for page in out_sortedVideos %}
+{% if page.type %}
+{% if page.playlists contains "Curso de Assembly com Snes e Mega Drive" %}
+{% assign i = i | plus:1 %}
+{% endif %}
+{% endif %}
+{% endfor %}
+
+<div class="videos_wrapper">
+
+  <h2>Retro Level Programming</h2>
+
+  <hr>
+
+  <div class="hcard-list">
+    <ul class="hcards">
+
+      {% for page in out_sortedVideos %}
+      {% if page.type %}
+      {% if page.playlists contains "Curso de Assembly com Snes e Mega Drive" %}
+      <li>
+        <a href="{{page.url}}">
+          <div class="hcard">
+
+            <div class="hcard-header"> {% comment %} Video thumbnail. {% endcomment %}
+              <div class="thumb-container">
+                {% if page.thumb%}
+                <div class="hcard-thumbnail"
+                  style="background-image: url('/pages_data/{{page.repository}}/{{page.thumb}}')">
+                </div>
+                {% else %}
+                <div class="hcard-thumbnail"
+                  style="background-image: url(https://i.ytimg.com/vi/{{page.youtube_video_id}}/mqdefault.jpg)">
+                </div>
+                {% endif %}
+              </div>
+            </div>
+
+            <div class="hcard-description">{% comment %} Short description/excerpt. {% endcomment %}
+              <span class="hcard-badge">{% assign i = i | minus:1 %}{{i}}</span>
+              <h3>{{page.title}}</h3>
+            </div>
+
+          </div>
+        </a>
+      </li>
+      {% endif %}
+      {% endif %}
+      {% endfor %}
+
+    </ul>
+  </div>
+</div>
