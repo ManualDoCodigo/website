@@ -10,7 +10,16 @@ repository: 0012-tutorial-canvas-parte2
 has_code: true
 has_p5: false
 tags: [Canvas,Javascript]
+playlists: [Tutorial de Canvas]
 permalink: /tutorial-canvas-parte2/
+
+related_videos:
+  - title: "HTML Canvas Reference"
+    author: w3schools
+    url: "https://www.w3schools.com/tags/ref_canvas.asp"
+  - title: "Drawing On the Canvas | HTML5 Canvas Tutorial for Beginners - Ep. 2"
+    author: Chris Courses
+    url: "https://www.youtube.com/watch?v=83L6B13ixQ0"
 
 reference_links:
   - title: "HTML Canvas Reference"
@@ -19,6 +28,14 @@ reference_links:
   - title: "Drawing On the Canvas | HTML5 Canvas Tutorial for Beginners - Ep. 2"
     author: Chris Courses
     url: "https://www.youtube.com/watch?v=83L6B13ixQ0"
+
+contributions:
+  - title: "HTML Canvas Reference"
+    author: w3schools
+    url: "https://www.w3schools.com/tags/ref_canvas.asp"
+  - title: "Drawing On the Canvas | HTML5 Canvas Tutorial for Beginners - Ep. 2"
+    author: Chris Courses
+    url: "https://www.youtube.com/watch?v=83L6B13ixQ0"    
 ---
 
 <style>
@@ -58,7 +75,7 @@ Abaixo temos a animação gerada no vídeo junto com o código.
 </div>
 
 {% capture _code %}{% highlight javascript linenos=table %}
-canvas = document.querySelector("canvas");
+let canvas = document.querySelector("canvas");
 
 canvas.width = innerWidth;
 canvas.height = innerHeight;
