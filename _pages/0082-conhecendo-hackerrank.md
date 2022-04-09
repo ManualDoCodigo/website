@@ -10,6 +10,6 @@ repository: 0082-conhecendo-hackerrank
 has_code: false
 has_p5: false
 tags: [Entrevista de Emprego, Hackerrank, Questões de Entrevista]
-playlists: [Tutoriais Gerais]
+playlists: [Programação]
 permalink: /conhecendo-hackerrank/
 ---
