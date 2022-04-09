@@ -10,6 +10,6 @@ repository: 0088-inverter-variaveis-xor
 has_code: false
 has_p5: false
 tags: [Algoritmos,Inverter Variáveis, Xor, Xor Swap]
-playlists: [Algoritmos]
+playlists: [Mini-Projetos e Algoritmos]
 permalink: /inverter-variaveis-xor/
 ---
