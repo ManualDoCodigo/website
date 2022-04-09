@@ -6,7 +6,7 @@ type: video
 description: Neste vídeo mostro como calcular a distância do jogador à borda do quadrado mais próximo para o raio atual. Essa distância (distToSideX) era a distância que faltava para conseguirmos iniciar o algoritmo DDA. Neste vídeo mostro apenas a parte matemática.
 entry_number: 117
 youtube_video_id: xnl2QQ4QPTk
-repository: 0117-wolfenstein3d-engine-raycasting-parte13
+repository: 0117-engine-de-raycasting-parte13
 has_code: false
 has_p5: false
 tags: [Wolfenstein 3D, Raycasting]
