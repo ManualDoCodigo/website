@@ -1,0 +1,66 @@
+---
+layout: default
+---
+{% assign videos = site.pages %}
+
+{% include tools/sort.html videos=videos %}
+
+<div class="videos_wrapper">
+
+  <h2>Playlists</h2>
+
+  <hr>
+
+  {% assign site_playlists = site.pages | map: "playlists" | uniq %}
+  {% for playlist in site_playlists %}
+
+  <div class="hcard-list">
+    <h2>{{ playlist }}</h2>
+    <ul class="hcards">
+      {% assign i = 1 %}
+      {% for page in out_sortedVideos %}
+      {% if page.type %}
+      {% if page.playlists contains playlist %}
+      {% assign i = i | plus:1 %}
+      {% endif %}
+      {% endif %}
+      {% endfor %}
+
+      {% for page in out_sortedVideos %}
+      {% if page.type %}
+      {% if page.playlists contains playlist %}
+      <li>
+        <a href="{{page.url}}">
+          <div class="hcard">
+
+            <div class="hcard-header"> {% comment %} Video thumbnail. {% endcomment %}
+              <div class="thumb-container">
+                {% if page.thumb%}
+                <div class="hcard-thumbnail"
+                  style="background-image: url('/pages_data/{{page.repository}}/{{page.thumb}}')">
+                </div>
+                {% else %}
+                <div class="hcard-thumbnail"
+                  style="background-image: url(https://i.ytimg.com/vi/{{page.youtube_video_id}}/mqdefault.jpg)">
+                </div>
+                {% endif %}
+              </div>
+            </div>
+
+            <div class="hcard-description">{% comment %} Short description/excerpt. {% endcomment %}
+              <span class="hcard-badge">{% assign i = i | minus:1 %}{{i}}</span>
+              <h3>{{page.title}}</h3>
+            </div>
+
+          </div>
+        </a>
+      </li>
+      {% endif %}
+      {% endif %}
+      {% endfor %}
+
+    </ul>
+  </div>
+
+  {% endfor %}
+</div>

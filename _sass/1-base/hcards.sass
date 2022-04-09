@@ -1,0 +1,161 @@
+$cardheight: 15rem
+
+.hcard
+  $padding: 2rem
+  width: 100%
+
+  box-shadow: 0 0 0px $box-shadow-primary, 0 0 0px $box-shadow-secondary
+  border-radius: $standard-border-radius
+  overflow: hidden
+  margin: 3rem 0rem
+  background: rgba(33, 38, 45, 0.65)
+  border: 0px solid #ddd
+  color: $text-color
+  height: $cardheight * 9 / 16
+
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  transition: all 250ms
+  
+  &:hover 
+    @media (hover: hover) 
+      transform: translateY(-5px)
+
+  > a
+    text-decoration: none
+    color: #58a6ff
+
+  .hcard-header
+
+    .thumb-container
+      width: 100%
+      height: auto
+      position: relative
+
+      .hcard-badge
+        position: absolute
+        right: 0
+        bottom: 0
+        background: #238636
+        color: #f0f0f0
+        @include text-style('title')
+        font-size: 2rem
+        padding: .5em .5em .5em .6em
+        border-radius: $standard-border-radius 0em 0em
+
+    .hcard-thumbnail
+      width: $cardheight
+      height: $cardheight * 9 / 16
+      background-size: cover
+      background-position: center
+
+    h3
+      font-size: 2rem
+      padding: 1.25em .5em .4em 1em
+      margin: 0
+      text-align: left
+      font-weight: bold
+
+
+    .hcard-date
+      color: $secondary-color
+      font-size: 1.5rem
+      padding: 0em 1.25em
+
+  .hcard-description
+    width: 100%
+    height: auto
+    position: relative
+    flex: 1
+
+    .hcard-badge
+      position: absolute
+      right: 0
+      bottom: 0
+      background: #238636
+      color: #f0f0f0
+      @include text-style('title')
+      font-size: 2rem
+      padding: .5em .5em .5em .6em
+      border-radius: $standard-border-radius 0em 0em
+
+    ul
+      padding: 0
+      padding-left: 1.5em
+
+    h3
+      display: flex
+      align-items: center
+      font-size: 2rem
+      text-align: center
+      font-weight: bold
+
+      @media (max-width: $tablet-small)
+        display: flex
+        align-items: center
+        margin: 0
+        font-size: 1.6rem
+
+  .buttons
+    display: flex
+    justify-content: space-between
+    padding: 0em $padding ($padding / 2)
+
+    @media (max-width: $mobile)
+      flex-wrap: wrap
+
+    .youtube-card
+      background: #fb617e
+
+    a
+      @extend .button-base
+      @include text-style('title')
+      font-weight: normal
+      font-size: 1.7rem
+      background: #7e8294
+      color: #21262d
+      flex-grow: 2
+      margin-left: 0.25em
+      margin-right: 0.25em
+      padding: 15px
+
+      @media (max-width: $mobile)
+        margin: 0
+
+      &:first-child
+        margin-left: 0
+
+      &:last-child
+        margin-right: 0
+
+      @media (max-width: $mobile)
+        flex-basis: 100%
+        margin-top: 0.5em
+
+.hcard-list
+  text-align: center
+  position: relative
+  margin-top: 5rem
+
+  .hcards
+    text-align: left
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-around
+    margin: 0
+    padding: 0
+
+    a
+      width: 100%
+      text-decoration: none
+
+    li
+      list-style-type: none
+      width: 100%
+      display: flex
+      .hcard
+        margin-top: 0.75rem
+        margin-bottom: 0.75rem
+
+    

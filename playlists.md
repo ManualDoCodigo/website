@@ -1,0 +1,4 @@
+---
+layout: playlists
+permalink: /playlists/
+---
