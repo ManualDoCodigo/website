@@ -11,5 +11,6 @@ has_code: false
 has_p5: true
 p5_code_id: OJnWfJSM
 tags: [Curso Javascript, P5]
+playlists: [Curso de JavaScript com P5.js]
 permalink: /curso-javascript-p5-1/
 ---
