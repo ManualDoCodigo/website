@@ -6,7 +6,7 @@ type: video
 description: Esta é a quarta parte desta série onde implemento uma engine de Raycasting. Neste vídeo introduzo o conceito de câmera.
 entry_number: 89
 youtube_video_id: 3bal9wLpJ6w
-repository: 0089-wolfenstein3d-engine-raycasting-parte4
+repository: 0089-engine-de-raycasting-parte4
 has_code: false
 has_p5: false
 tags: [Wolfenstein 3D,Raycasting,Computação Gráfica, Engine, Câmera]
