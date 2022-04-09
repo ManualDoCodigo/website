@@ -6,7 +6,7 @@ type: video
 description: Neste vídeo eu falo como são os mapas do Wolf3D e como serão implementados no código.
 entry_number: 60
 youtube_video_id: KlH9ASA70Gw
-repository: 0060-wolfenstein3d-engine-raycasting-parte2
+repository: 0060-engine-de-raycasting-parte2
 has_code: false
 has_p5: true
 p5_code_id: -TxtTgwGu
