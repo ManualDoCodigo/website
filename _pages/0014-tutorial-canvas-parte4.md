@@ -10,5 +10,6 @@ repository: 0014-tutorial-canvas-parte4
 has_code: true
 has_p5: false
 tags: [Canvas,Javascript]
+playlists: [Tutorial de Canvas]
 permalink: /tutorial-canvas-parte4/
 ---
