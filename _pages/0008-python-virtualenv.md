@@ -10,6 +10,7 @@ repository: 0008-python-virtual-env
 has_code: false
 has_p5: false
 tags: [Python]
+playlists: [Python]
 permalink: /pythonvirtualenv/
 
 reference_links:
