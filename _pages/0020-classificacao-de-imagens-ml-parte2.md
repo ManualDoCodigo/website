@@ -11,5 +11,6 @@ has_code: false
 has_p5: true
 p5_code_id: 5wk8uROf5
 tags: [Machine Learning, ML5, Classificação de Imagens]
+playlists: [Machine Learning]
 permalink: /ml-classificacao-imagens/
 ---
