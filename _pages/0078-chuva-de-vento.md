@@ -11,6 +11,6 @@ has_code: false
 has_p5: true
 p5_code_id: qxAIqc1jc
 tags: [Javascript, P5, Chuva, Perlin Noise, Animação]
-playlists: [Desafios]
+playlists: [Mini-Projetos e Algoritmos]
 permalink: /chuva-de-vento/
 ---
