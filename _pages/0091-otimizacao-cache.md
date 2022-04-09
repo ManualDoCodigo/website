@@ -10,6 +10,6 @@ repository: 0091-otimizacao-cache
 has_code: false
 has_p5: false
 tags: [C, Cache, Otimização de Código]
-playlists: [Tutoriais Gerais]
+playlists: [Mini-Projetos e Algoritmos]
 permalink: /otimizacao-cache/
 ---
