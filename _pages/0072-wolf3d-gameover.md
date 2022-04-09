@@ -11,7 +11,7 @@ has_code: false
 has_p5: true
 p5_code_id: 7znAaCzWJ
 tags: [Wolfenstein 3D, FizzleFade, Game Over]
-playlists: [Desafios]
+playlists: [Mini-Projetos e Algoritmos]
 permalink: /wolf3d-gameover/
 
 reference_links:
