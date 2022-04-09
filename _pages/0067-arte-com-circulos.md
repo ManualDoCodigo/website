@@ -11,6 +11,6 @@ has_code: false
 has_p5: true
 p5_code_id: 9KD8kD6IR
 tags: [Arte com Código, Animação]
-playlists: [Arte com Código]
+playlists: [Mini-Projetos e Algoritmos]
 permalink: /arte-com-circulos/
 ---
