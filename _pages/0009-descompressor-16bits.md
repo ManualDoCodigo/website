@@ -10,6 +10,6 @@ repository: 0009-descompressor-16bits
 has_code: true
 has_p5: false
 tags: [Algoritmos, Desafios, Python, Romhacking, Compressão, Assembly, Mega Drive]
-playlists: [Desafios]
+playlists: [Mini-Projetos e Algoritmos]
 permalink: /descompressor-16bits/
 ---
