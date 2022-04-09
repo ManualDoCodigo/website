@@ -11,6 +11,6 @@ has_code: false
 has_p5: true
 p5_code_id: bb_JXp-RM
 tags: [Bubble Sort, Ordenação, Algoritmos]
-playlists: [Desafios, Algoritmos]
+playlists: [Mini-Projetos e Algoritmos]
 permalink: /bubble-sort/
 ---
