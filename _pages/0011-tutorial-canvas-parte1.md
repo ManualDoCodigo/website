@@ -10,6 +10,7 @@ repository: 0011-tutorial-canvas-parte1
 has_code: true
 has_p5: false
 tags: [Canvas,Javascript]
+playlists: [Tutorial de Canvas]
 permalink: /tutorial-canvas-parte1/
 
 reference_links:
