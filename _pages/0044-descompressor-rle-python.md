@@ -10,6 +10,6 @@ repository: 0044-descompressor-rle-python
 has_code: false
 has_p5: false
 tags: [Compressão,Descompressor,RLE,Python]
-playlists: [Algoritmos]
+playlists: [Mini-Projetos e Algoritmos]
 permalink: /descompressor-rle-python/
 ---
