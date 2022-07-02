@@ -189,7 +189,7 @@ No Linux temos que colocar em *~/.vimrc*.
 
 Para o Neovim temos que criar um arquivo chamado ***init.vim*** e a localização varia no Windows e no Linux.
 
-No *Windows* temos que colocar em *C:/Users/NomeDoUsuário/AppData/nvim/init.vim*. Temos então que criar uma pasta chamada ***nvim*** na pasta *AppData* e dentro dela criar um arquivo chamado ***init.vim***.
+No *Windows* temos que colocar em *C:/Users/NomeDoUsuário/AppData/Local/nvim/init.vim*. Temos então que criar uma pasta chamada ***nvim*** na pasta *AppData* e dentro dela criar um arquivo chamado ***init.vim***.
 
 No Linux temos que colocar em *~/.config/nvim/init.vim*. Temos então que criar uma pasta chamada ***nvim*** na pasta *~/.config* e dentro dela criar um arquivo chamado ***init.vim***.
 
