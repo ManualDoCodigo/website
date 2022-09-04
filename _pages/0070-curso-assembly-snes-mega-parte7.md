@@ -36,13 +36,13 @@ O valor da saída do Flip Flop só poderá ser alterado novamente na próxima bo
 
 A figura abaixo mostra um Flip Flop simples do tipo D.
 
-<img src="/pages_data/{{page.repository}}/dflipflop.jpg" alt="D Flip Flop" style="width:40%;"/>
+<img src="/pages_data/{{page.repository}}/dflipflop.jpg" alt="D Flip Flop" style="opacity:0.8; width:40%;"/>
 
 Na imagem acima vemos que temos como entrada no Flip Flop o *clock* e o sinal *Data*, que é o sinal que queremos que o Flip Flop armazene.
 
 O clock é um sinal que fica alterando o valor de 0 pra 1 (ou de 0V pra 5V no caso dos consoles) com uma certa frequência. A figura abaixo mostra o formato típico de um clock.
 
-<img src="/pages_data/{{page.repository}}/clock.png" style="width:50%;"/>
+<img src="/pages_data/{{page.repository}}/clock.png" style="opacity:0.8; width:50%;"/>
 
 Nos circuitos mais complexos é comum existirem vários clocks diferentes, com diferentes frequência para diferentes partes do circuito. Mas em um Flip Flip pode ser usado qualquer tipo de sinal como clock, e não um que tenha uma frequência fixa o da foto acima. Isso vai da lógica do hardware.
 
