@@ -17,10 +17,10 @@ permalink: /curso-assembly-snes-mega-parte8/
 
 
 
-<img src="/pages_data/{{page.repository}}/register1.jpg" style="width:80%;"/>
+<img src="/pages_data/{{page.repository}}/register1.jpg" style="opacity:0.8; width:80%;"/>
 
-<img src="/pages_data/{{page.repository}}/register2.jpg" style="width:80%;"/>
+<img src="/pages_data/{{page.repository}}/register2.jpg" style="opacity:0.8; width:80%;"/>
 
-<img src="/pages_data/{{page.repository}}/register3.jpg" style="width:50%;"/>
+<img src="/pages_data/{{page.repository}}/register3.jpg" style="opacity:0.8; width:80%;"/>
 
-<img src="/pages_data/{{page.repository}}/register4.jpg" style="width:90%;"/>
+<img src="/pages_data/{{page.repository}}/register4.jpg" style="opacity:0.8; width:80%;"/>
