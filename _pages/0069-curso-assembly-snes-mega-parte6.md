@@ -32,7 +32,7 @@ A memória também tem que ter *pinos de dados*, que conterão os dados lidos ou
 
 A imagem abaixo mostra um esquemático típico para as memórias da época do Snes e do Mega.
 
-<img src="/pages_data/{{page.repository}}/memory.jpg" alt="Memória" style="width:70%;"/>
+<img src="/pages_data/{{page.repository}}/memory.jpg" alt="Memória" style="opacity:0.75; width:70%;"/>
 
 Fora os pinos de endereço e de dados precisamos também de pinos pra energizar o chip, então temos um pino que é o ***VCC***, que são os 5V que alimentam o chip, e o ***GND***, que é o terra (Ground).
 
@@ -54,7 +54,7 @@ Lembrando que os pinos de endereço e de dados ***NÃO*** tem lógica invertida 
 
 Os pinos de dados podem ter 3 valores: ***0***, ***1*** e ***Z***. Esse ***Z*** é o que chamamos de ***Tristate***. Isso nada mais é do que "desconectar" os pinos do barramento externo. Então é como se no interior do chip houvesse um interruptor que desconecta o pino do mundo exterior, como na figura abaixo.
 
-<img src="/pages_data/{{page.repository}}/tristate1.jpg" alt="Memória" style="width:30%;"/>
+<img src="/pages_data/{{page.repository}}/tristate1.jpg" alt="Memória" style="opacity:0.75; width:30%;"/>
 
 Na verdade o que acontece é que o pino é ligado internamente em uma alta impedância, o que faz com que nenhum sinal saia ou entre pelo pino. Na prática seria o mesmo que desconectar o pino do mundo exterior, como expliquei acima.
 
@@ -62,7 +62,7 @@ O *Tristate* é necessário quando temos que colocar vários elementos no barram
 
 Portanto, somente um chip pode acessar o barramento por vez. Enquanto isso os outros chips ficam com a saída em *Tristate*. A figura abaixo ilustra isso.
 
-<img src="/pages_data/{{page.repository}}/tristate2.jpg" alt="Memória" style="width:50%;"/>
+<img src="/pages_data/{{page.repository}}/tristate2.jpg" alt="Memória" style="opacity:0.75; width:50%;"/>
 
 ### Funcionamento da Memória - Leitura
 
@@ -75,7 +75,7 @@ O que faz a leitura acontecer é colocar o pino *\RD* pra 0 (com o *\CE* também
 Para a leitura, se o *\RD* ou o *\CE*, ou ambos, estiverem com 1, a saída é *Z*. Ambos os pinos *\RD* e *\CE* devem estar com 0 para que saia dados.
 A figura abaixo resume as combinações para a leitura.
 
-<img src="/pages_data/{{page.repository}}/table.jpg" alt="Memória" style="width:35%;"/>
+<img src="/pages_data/{{page.repository}}/table.jpg" alt="Memória" style="opacity:0.75; width:35%;"/>
 
 ### Funcionamento da Memória - Escrita
 
