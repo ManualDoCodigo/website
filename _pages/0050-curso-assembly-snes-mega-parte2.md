@@ -1,6 +1,6 @@
 ---
 layout: page
-title: "Diagramas do Snes. Curso de Assembly. Parte 2"
+title: "Estudando o Snes por DENTRO com os Diagramas de Bloco e Esquemáticos."
 date: 2020-06-06
 type: video
 description: Neste episódio eu falo mais sobre o hardware do Snes, mostrando os diagramas de bloco e o esquemático. Temos que conhecer bem o hardware que estamos trabalhando, então os diagramas ajudam muito nisso.
@@ -31,7 +31,7 @@ O objetivo principal que temos é implementarmos aplicações para rodar no Snes
 
 Se quisermos ter uma noção mais alto nível do hardware é aí que entra o diagrama de blocos, pois ele dá uma visão geral dos principais elementos presentes no hardware.
 
-Como o diagrama de blocos conseguimos identificar os principais dispositivos e como eles estão conectados. Se quisermos ir mais a fundo aí podemos analisar os esquemáticos, explicado mais abaixo.
+Com o diagrama de blocos conseguimos identificar os principais dispositivos e como eles estão conectados. Se quisermos ir mais a fundo aí podemos analisar os esquemáticos, explicado mais abaixo.
 
 A figura abaixo mostra o diagrama de blocos do Snes.
 
@@ -48,7 +48,7 @@ Veremos em vídeos posteriores qual a função de cada barramento e como a troca
 
 ## Cpu Ricoh 5A22
 
-Esta é a Cpu principal do Snes. No vídeo anterior eu citei que o Snes usa a Cpu compatível com o 65C816, porém os desenvolvedores do Snes colocaram o 65C816 em um encapsulamento junto com outras coisas. Então a cpu principal não apenas executa as instruções dos programas (jogos) mas também é responsável por outras tarefas, como Dma, gerenciamento dos controle, acesso aos barramentos, etc.
+Esta é a Cpu principal do Snes. No vídeo anterior eu citei que o Snes usa a Cpu compatível com o 65C816, porém os desenvolvedores do Snes colocaram o 65C816 em um encapsulamento junto com outras coisas. Então a cpu principal não apenas executa as instruções dos programas (jogos) mas também é responsável por outras tarefas, como Dma, gerenciamento dos controles, acesso aos barramentos, etc.
 Portanto a Cpu Ricoh 5A22 é um chip que foi criado para o Snes que engloba a cpu 65C816 mais outras funcionalidades necessárias para o Snes.
 
 Essa foi uma decisão de projeto para simplificar o hardware, e quando formos estudar os diagramas do Mega Drive veremos que lá é diferente.
@@ -59,17 +59,17 @@ Mais pra frente no curso a Cpu será bem mais detalhada. Por enquanto temos que 
 
 Essa é a memória Ram principal do Snes. Working Ram significa memória de trabalho, que é a memória de propósito geral disponível para o sistema. São como se fossem os chips de Ram que você instala em um computador. São 128KiB de memória, localizados nos bancos $7e e $7f (isso será explicado mais pra frente).
 
-Vemos que os 3 barramentos chegam na Wram.
+Vemos que os três barramentos chegam na Wram.
 
 ## PPU (Picture Processing Unit)
 
-A PPU é o chip que processa os gráficos. Fisicamente são dois chips, porém do lado do programador enxergamos a PPU como uma entidade única, então o fato de ser dividida em dois chips não fa diferença pro assembly.
+A PPU é o chip que processa os gráficos. Fisicamente são dois chips, porém do lado do programador enxergamos a PPU como uma entidade única, então o fato de ser dividida em dois chips não faz diferença pro assembly.
 
-A Vram, que é a memória de vídeo, possui 64KiB de tamanho e serve para armazenar os elementos gráficos que são mostrados na televisão.
+A Vram, que é a memória de vídeo, possui 64KiB de tamanho e serve para armazenar os elementos gráficos que são mostrados na televisão. A Vram é dividida em dois chips de 32KiB cada.
 
 A PPU será detalhada melhor no futuro.
 
-Na imagem vemos do diagrama de blocos vemos também que o bloco que faz o processamento gráfico também possui outros chips que fazem a conversão dos sinais para os formatos de vídeo necessários para a comunicação com os aparelhos de TV. Porém essa parte do circuito não tem interface nenhuma com o software, então é algo posterior à PPU que não tem acesso direto com o software.
+No diagrama de blocos vemos também que o bloco que faz o processamento gráfico também possui outros chips que fazem a conversão dos sinais para os formatos de vídeo necessários para a comunicação com os aparelhos de TV. Porém essa parte do circuito não tem interface nenhuma com o software, então é algo posterior à PPU que não tem acesso direto com o software.
 
 ## Sound System
 
@@ -79,13 +79,13 @@ Somado aos 2 chips de som citados acima temos 64KiB de Ram para o som.
 
 O clock dos chips de som é diferente do clock principal e roda a 24.576MHz.
 
-Assim como no PPU existe também uma parte do circuito responsável pela interface de áudio com o mundo externo, como amplificadores, etc. Porém essa parte do circuito não tem interface com o software.
+Assim como no PPU, existe também uma parte do circuito responsável pela interface de áudio com o mundo externo, como amplificadores, etc. Porém essa parte do circuito não tem interface com o software.
 
 ## Conector de Cartucho (Cartridge Connector)
 
-O conector de cartuchos é onde encaixamos os nossos jogos. Esses conector possui todos os três barramentos e possui todos os pinos necessários para que haja a comunicação do hardware do cartucho com os demais elementos internos do Snes.
+O conector de cartuchos é onde encaixamos os nossos jogos. Esse conector possui todos os três barramentos e possui todos os pinos necessários para que haja a comunicação do hardware do cartucho com os demais elementos internos do Snes.
 
-Mais detalhes do conector serão dados em vídeo futuros quando necessário.
+Mais detalhes do conector serão dados em vídeos futuros quando necessário.
 
 ## Cartucho
 
@@ -93,7 +93,7 @@ Os cartuchos que encaixamos no console possuem um hardware com diversos elemento
 
 Mais detalhes serão dados em vídeos futuros.
 
-O mais importante a notar é que os chips de memória do cartucho (SRam e Rom) estão conectados nos barramentos do console, assim como a Wram por exemplo. Então entenda o cartucho como sendo mais um elemento conectado no barramento assim como todos os outros elementos citados acima.
+O mais importante a se notar é que os chips de memória do cartucho (SRam e Rom) estão conectados nos barramentos do console, assim como a Wram por exemplo. Então entenda o cartucho como sendo mais um elemento conectado no barramento assim como todos os outros elementos citados acima.
 
 ## Cic
 
