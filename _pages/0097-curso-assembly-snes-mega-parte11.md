@@ -13,3 +13,13 @@ tags: [Assembly, Snes, Mega Drive, Romhacking, Multiplexadores, Decoders]
 playlists: [Curso de Assembly com Snes e Mega Drive]
 permalink: /curso-assembly-snes-mega-parte11/
 ---
+
+<img src="/pages_data/{{page.repository}}/mux1.jpg" style="opacity:0.8; width:80%;"/>
+<img src="/pages_data/{{page.repository}}/mux2.jpg" style="opacity:0.8; width:80%;"/>
+<img src="/pages_data/{{page.repository}}/mux3.jpg" style="opacity:0.8; width:80%;"/>
+<img src="/pages_data/{{page.repository}}/mux4.jpg" style="opacity:0.8; width:80%;"/>
+<img src="/pages_data/{{page.repository}}/mux5.jpg" style="opacity:0.8; width:100%;"/>
+
+<a href="/pages_data/{{page.repository}}/mux6.jpg" target="_blank">
+  <img src="/pages_data/{{page.repository}}/mux6.jpg" style="opacity:0.8; width:100%;"/>
+</a>
