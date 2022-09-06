@@ -14,17 +14,14 @@ playlists: [Curso de Assembly com Snes e Mega Drive]
 permalink: /curso-assembly-snes-mega-parte10/
 ---
 
-<a href="/pages_data/{{page.repository}}/cpu1.jpg" target="_blank">
-  <img src="/pages_data/{{page.repository}}/cpu1.jpg" style="opacity:0.8; width:100%;"/>
-</a>
-
-<img src="/pages_data/{{page.repository}}/cpu2.jpg" style="opacity:0.8; width:60%;"/>
-<img src="/pages_data/{{page.repository}}/cpu3.jpg" style="opacity:0.8; width:40%;"/>
-<img src="/pages_data/{{page.repository}}/cpu4.jpg" style="opacity:0.8; width:70%;"/>
+<img src="/pages_data/{{page.repository}}/cpu1.jpg" style="opacity:0.8; width:80%;"/>
+<img src="/pages_data/{{page.repository}}/cpu2.jpg" style="opacity:0.8; width:80%;"/>
+<img src="/pages_data/{{page.repository}}/cpu3.jpg" style="opacity:0.8; width:80%;"/>
+<img src="/pages_data/{{page.repository}}/cpu4.jpg" style="opacity:0.8; width:80%;"/>
 <img src="/pages_data/{{page.repository}}/cpu5.jpg" style="opacity:0.8; width:80%;"/>
 <img src="/pages_data/{{page.repository}}/cpu6.jpg" style="opacity:0.8; width:80%;"/>
-<img src="/pages_data/{{page.repository}}/cpu7.jpg" style="opacity:0.8; width:60%;"/>
-<img src="/pages_data/{{page.repository}}/cpu8.jpg" style="opacity:0.8; width:80%;"/>
-<img src="/pages_data/{{page.repository}}/cpu9.jpg" style="opacity:0.8; width:80%;"/>
-<img src="/pages_data/{{page.repository}}/cpu10.jpg" style="opacity:0.8; width:80%;"/>
-<img src="/pages_data/{{page.repository}}/cpu11.jpg" style="opacity:0.8; width:80%;"/>
+
+<a href="/pages_data/{{page.repository}}/cpu7.jpg" target="_blank">
+  <img src="/pages_data/{{page.repository}}/cpu7.jpg" style="opacity:0.8; width:100%;"/>
+</a>
+
