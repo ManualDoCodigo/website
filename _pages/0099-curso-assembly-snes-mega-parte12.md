@@ -13,3 +13,20 @@ tags: [Assembly, Snes, Mega Drive, Romhacking, Alu, Unidade Lógica Aritmética]
 playlists: [Curso de Assembly com Snes e Mega Drive]
 permalink: /curso-assembly-snes-mega-parte12/
 ---
+
+<img src="/pages_data/{{page.repository}}/alu1.jpg" style="opacity:0.8; width:80%;"/>
+<img src="/pages_data/{{page.repository}}/alu2.jpg" style="opacity:0.8; width:80%;"/>
+<img src="/pages_data/{{page.repository}}/alu3.jpg" style="opacity:0.8; width:80%;"/>
+<img src="/pages_data/{{page.repository}}/alu4.jpg" style="opacity:0.8; width:80%;"/>
+<img src="/pages_data/{{page.repository}}/alu5.jpg" style="opacity:0.8; width:80%;"/>
+<img src="/pages_data/{{page.repository}}/alu6.jpg" style="opacity:0.8; width:80%;"/>
+
+<a href="/pages_data/{{page.repository}}/alu7.jpg" target="_blank">
+  <img src="/pages_data/{{page.repository}}/alu7.jpg" style="opacity:0.8; width:100%;"/>
+</a>
+
+<img src="/pages_data/{{page.repository}}/alu8.jpg" style="opacity:0.8; width:80%;"/>
+
+<a href="/pages_data/{{page.repository}}/alu9.png" target="_blank">
+  <img src="/pages_data/{{page.repository}}/alu9.png" style="opacity:0.8; width:100%;"/>
+</a>
