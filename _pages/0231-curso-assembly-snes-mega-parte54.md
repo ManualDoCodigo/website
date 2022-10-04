@@ -129,7 +129,7 @@ O *Address Register Direct*, ou *Registrador de Endereço Direto* em português,
 <img src="/assets/img/icons/mario2.gif">
 <div style='display: block'>
 <h4>Address Register Direct</h4>
-<p>Sempre que usarmos um registrador de endereços diretamente estaremos usando o modo de endereçamento <em>Address Register Direct</em></p>
+<p>Sempre que usarmos um registrador de endereços diretamente estaremos usando o modo de endereçamento <em>Address Register Direct</em>.</p>
 </div>
 </div>
 
@@ -141,7 +141,7 @@ movea.l a0,a3
 {% endhighlight %}{% endcapture %}{% include tools/fixlinenos.html %}
 {{ _code }}
 
-A instrução ***movea*** já aprendemos em episódios passados e é a instrução que copia algum dado, vindo de algum *endereço efetivo* para um *registrador de endereços*. Na instrução acima ambos os parâmetros possuem o modo *Address Register Direct*.
+A instrução ***movea*** já aprendemos em episódios passados e é a instrução que copia algum dado, vindo de algum *endereço efetivo*, para um *registrador de endereços*. Na instrução acima ambos os parâmetros possuem o modo *Address Register Direct*.
 
 ## Immediate no 68000
 
@@ -163,9 +163,9 @@ Um imediato então sempre começa com um *#* seguido de um número, e no assembl
 
 <img src="/pages_data/{{page.repository}}/addrmode5.jpg" style="opacity:0.8; width:50%;"/>
 
-Se não entendo o formato acima é muito importante aprender sobre expressões regulares, pois aparece constantemente em programação.
+Se você não entende o formato acima, é muito importante aprender sobre expressões regulares, pois aparece constantemente em programação.
 
-De longe o modo mais utilizado é o ***hexadecimal***, então quase todas as vezes veremos os imediatos começarem com *#$*, pois os imediatos começam com *#* e um número hexadecimal começa com *$*.
+De longe o modo mais utilizado é o ***hexadecimal***, então em quase todas as vezes veremos os imediatos começarem com *#$*, pois os imediatos começam com *#* e um número hexadecimal começa com *$*.
 
 A instrução abaixo exemplifica o uso do modo de endereçamento *imediato*:  
 
@@ -177,7 +177,7 @@ move.l #$10204fff,d0
 
 Vemos que o primeiro parâmetro usa o modo *imediato* e o segundo parâmetro usa o modo *registrador de dados direto* (data register direct).
 
-No caso do 68000 o imediato fica localizado em uma ou duas *extension words* (palavras de extensão) junto com o opcode da instrução. Então nas intruções que usam o modo de endereçamento imediato, além dos 16 bits da instrução existem mais duas words (16 bits) na sequência. Como o 68000 é *big endian* a primeira word vem primeiro. 
+No caso do 68000 o imediato fica localizado em uma ou duas *extension words* (palavras de extensão) junto com o opcode da instrução. Então nas intruções que usam o modo de endereçamento imediato, além dos 16 bits da instrução existem mais duas words (de 16 bits) na sequência. Como o 68000 é *big endian* a primeira word (a mais significativa) vem primeiro. 
 
 Quando a instrução tem tamanho *.b* ou *.w*, apenas uma extension word é usada, mas quando é *.l* aí são necessárias duas extension words. Quando é *.b* apenas os bits *0-7* são usados.
 
@@ -235,13 +235,13 @@ gameover:
 
 A cpu do Snes possue bem mais modos de endereçamento se comparado com o 68000 do Mega Drive, porém o detalhe é que no Snes os nomes mudam dependendo do tamanho dos parâmetros, o que não acontece no 68000. Então no fundo vários modos são parecidos com os do 68000, porém quebrados em nomes diferentes dependendo do tamanho. 
 
-Porém existem detalhes importantes relativo aos tamanhos, como é o caso dos modos chamados *Direct Page*.
+Porém existem detalhes importantes relativo aos tamanhos, como é o caso dos modos chamados *Direct Page*, que veremos em outro episódio.
 
 <div class="info">
 <img src="/assets/img/icons/snes1.gif">
 <div style='display: block'>
 <h4>Cpu do Snes</h4>
-<p>Como a Cpu do Snes é de acumulador e trabalha com bancos de 64KB, existem diferenças bem legais de aprender comparando com o Mega Drive.</p>
+<p>Como a Cpu do Snes é de acumulador e trabalha com bancos de 64 KB, existem diferenças bem legais de aprender comparando com o Mega Drive.</p>
 </div>
 </div>
 
@@ -265,4 +265,122 @@ A Cpu do Snes tem acumulador, então não tem toda aquela quantidade de registra
 
 ## Immediate no 65c816 do Snes
 
-O modo imediato no Snes 
+O modo imediato na cpu do Snes segue a mesma coisa do 68000 do Mega Drive, onde o valor do imediato fica embutida junto com o binário da instrução, em bytes de extensão.
+
+A diferença é que o tamanho do imediato varia de acordo com modo de acesso à memória que a Cpu está no momento (8 ou 16 bits). Já vimos no passado esses detalhes de como alterar a cpu entre os modos 8 e 16 bits.
+
+Quando a cpu estiver em modo *8 bits*, o imediato tem que ter o tamanho de 8 bits exato, como na instrução abaixo:
+
+{% capture _code %}{% highlight python linenos=table %}
+lda #$12
+{% endhighlight %}{% endcapture %}{% include tools/fixlinenos.html %}
+{{ _code }}
+
+Quando a cpu está em modo 16 bits, os imediatos tem que ter 16 bits exatos, como na instrução abaixo:
+
+{% capture _code %}{% highlight python linenos=table %}
+lda #$0012
+{% endhighlight %}{% endcapture %}{% include tools/fixlinenos.html %}
+{{ _code }}
+
+Note que o tamanho do imediato tem que respeitar o modo da cpu (8 ou 16 bits), pois caso contrário ocorrerá geração errada de código. 
+
+***O assembler não tem como saber que modo a cpu está no momento em que vai gerar o código de uma instrução, portanto o assembler precisa que o imediato esteja no tamanho certo para que ele saiba como gerar o código binário correto.***
+
+Se você se questinar se as instruções *sep* e *rep*, que já aprendemos, poderiam ser usadas pelo assembler para saber o modo atual da cpu (8 ou 16 bits), a resposta é ***NÃO***, pois nada garante que o assembler pense que a cpu está em modo 8 bits, depois de por exemplo encontrar uma instrução *sep #$20* mais acima, e alguma outra parte do código que esteja em modo 16 bits pular para esta instrução atual sendo gerada. Existem muitas opções pra essa lógica quebrar, então isso não funciona.
+
+O código abaixo mostra dois bugs gerados pelo tamanho errado sendo usado no imediato:
+
+{% capture _code %}{% highlight python linenos=table %}
+sep #$20    // Entrando em modo 8 bits
+lda #$0012  // Ops, era pra ser #$12. Bug!
+
+rep #$20    // Entrando em modo 16 bits
+lda #$12    // Ops, era pra ser #$0012. Bug!
+{% endhighlight %}{% endcapture %}{% include tools/fixlinenos.html %}
+{{ _code }}
+
+No primeiro bug acima quando o assembler chegar na instrução *lda #$0012* ele gerará o código supondo que a cpu está em modo 16 bits, pois o *sep* mais acima não garante nada. O assembler então vai gerar o opcode do *lda* e vai colocar dois *extension bytes* na frente (0x1200). O *0x12* fica na frente pois a cpu é *little endian*. O problema ocorrerá quando a cpu executar o código, pois como ele estará em modo 8 bits ela irá esperar que exista apenas um byte de imediato na frente, porém terá dois. A cpu não sabe disse, então ela pegará um byte normalmente porém o próximo byte de extensão, que seria o *0x00* será tratado como a próxima instrução, que no caso é um *brk*, o que gerará um bug catastrófico.
+
+<div class="info">
+<img src="/assets/img/icons/bowser1.gif">
+<div style='display: block'>
+<h4>Cuidado com o bug</h4>
+<p>Em assembly de Snes sempre coloque o imediato no tamanho exato de acordo com o modo da cpu (8 ou 16 bits). Errar nisso é bug chato na certa.</p>
+</div>
+</div>
+
+Às vezes é difícil saber em que modo estamos quando vemos um código de Snes. Por causa disso o Bass permite que em algumas instruções nós coloquemos um *.b* ou *.w* na instrução, o que faz o assembler gerar o código supondo que a cpu está no modo indicado e fica mais fácil de analizar os códigos. Porém se colocar o modo errado vai gerar bug do mesmo jeito. 
+
+Já falei sobre isso em um episódio passado.
+
+Abaixo tem uns exemplos pra relembrar:
+
+{% capture _code %}{% highlight python linenos=table %}
+sep #$20      // Entrando em modo 8 bits
+lda.b #$12    // Ok
+lda.b #$0012  // Ainda Ok, pois é .b, então o Bass converte pra #$12
+lda.w #$0012  // Bug! Vai gerar supondo 16 bits pois é .w
+lda.w #$12    // Bug! Vai converter pra #$0012 pois é .w
+
+rep #$20      // Entrando em modo 16 bits
+lda.w #$0012  // Ok
+lda.w #$12    // Ainda Ok. Como é .w converte pra #$0012
+lda.b #$0012  // Bug! Como é .b vai converter pra #$12
+lda.b #$12    // Bug! Mesmo erro. Gerará apenas um extension byte.
+{% endhighlight %}{% endcapture %}{% include tools/fixlinenos.html %}
+{{ _code }}
+
+Vemos então que está sintaxe força apenas 1 extension byte quando é *.b* e 2 extension words quando é *.w*, o que gera bug se colocar o modo diferente do que a cpu está no momento da execução.
+
+Esses problemas de tamanho não ocorrem na cpu do Mega Drive pois no 68000 as instruções são sempre 16 bits, então o assembler sempre sabe como gerar a instrução corretamente.
+
+## Modo Accumulator no 65c816 do Snes
+
+O modo *Accumulator* (Acumulador) é extremamente simples e diz respeito às instruções que usam o registrador *A* de forma implícita e apenas alterar o valor do A, sem utilizar nada da memória nem nenhum imediate. 
+
+Como exemplo temos a instrução *inc* abaixo:
+
+{% capture _code %}{% highlight python linenos=table %}
+inc
+{% endhighlight %}{% endcapture %}{% include tools/fixlinenos.html %}
+{{ _code }}
+
+Esta instrução incrementa o *A* diretamente, sem precisar de nada extra. Outro exemplo seria a instrução *asl* (arithmetic shif left) abaixo:
+
+{% capture _code %}{% highlight python linenos=table %}
+asl
+{% endhighlight %}{% endcapture %}{% include tools/fixlinenos.html %}
+{{ _code }}
+
+Ainda não aprendemos essa instrução na série, mas a instrução apenas faz um shift dos bits do *A* para a esquerda, sem precisar de nada extra.
+
+<div class="info">
+<img src="/assets/img/icons/mario3.gif">
+<div style='display: block'>
+<h4>Modo Acumulador</h4>
+<p>As instruções que pegam o valor do registrador A, alteram esse valor e guardam o resultado novamente no registrador A utilizam o modo de endereçamento <em>Accumulator</em>.</p>
+</div>
+</div>
+
+Alguns livros e documentos colocam esse modo junto com o modo *Implied* (implícito) que veremos em outro episódio. Porém aqui está separado pois o modo *Implied* geralmente supões dois operandos diferentes, como na instrução *tax* por exemplo, onde copiamos do *A* pro *X*. Já o modo *Accumulator* é ***unário***, onde a fonte e o destino é o mesmo registrador, no caso o *A*.
+
+## Código do tutorial do Snes
+
+No vídeo eu utilizei o código abaixo como exemplo para rodar no debugger do Snes:
+
+{% capture _code %}{% highlight python linenos=table %}
+seek($200)
+  rep #$30
+
+  //Immediate
+  lda #$2001
+
+  //Accumulator
+  asl
+
+  //Immediate
+  sep #$20
+  lda #$55
+{% endhighlight %}{% endcapture %}{% include tools/fixlinenos.html %}
+{{ _code }}
