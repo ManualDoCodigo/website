@@ -1,11 +1,11 @@
 ---
 layout: page
 title: "O que são Modos de Endereçamento em Assembly?"
-date: 2022/02/10
+date: 2022/10/04
 type: video
 description: Neste episódio vamos começar a aprender mais a fundo os modos de endereçamento disponíveis no Snes e no Mega Drive. 
-entry_number: 230
-youtube_video_id: qUaQ0au_B9U
+entry_number: 231
+youtube_video_id: bv2FUVufVwY
 repository: "0231-curso-assembly-snes-mega-parte54"
 has_code: false
 has_p5: false
