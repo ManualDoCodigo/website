@@ -52,7 +52,6 @@ html, body
     letter-spacing: $body-text-letter-spacing
     line-height: $body-text-line-height
 
-
 html, body
   @include text-style('body')
   color: $text-color
@@ -75,11 +74,17 @@ h1
 
 h2
   font-size: 3rem
+  font-weight: bold
+  font-family: "RetroGaming", sans-serif
   margin-top: 2em
+  padding: 0px
   text-align: center
   color: #c9d1d9
   border-radius: 5px
-  background-color: rgba(109, 202, 232, 0.2)
+  border-style: solid
+  border-color: #A50040
+  border-width: thick
+  background-color: rgba(216,0,115,0.9)
 
 h3
   font-size: 2.5rem
@@ -87,6 +92,15 @@ h3
   padding: 6px 10px 0px 10px
   border-radius: 5px
   color: #58a6ff
+
+h5
+  font-size: 2.5rem
+  background-color: rgba(255,199,99,0)
+  padding: 6px 10px 0px 10px
+  border-radius: 5px
+  color: #58a6ff
+  border-bottom: thick solid #A50040
+  font-family: "Planelagos", sans-serif
 
 .subtitle
   text-align: center
@@ -124,3 +138,49 @@ p
 
     em
       color: red
+
+.info
+  margin-top: 2em
+  margin-bottom: 2em
+  text-align: center
+  color: #ace
+  border-radius: 5px
+  border: 0.1rem #79B solid
+  background-color: rgba(0,34,102,0.5)
+  display: flex
+  align-items: center
+
+  p
+    margin-right: 1em
+    text-align: left
+    margin-top: 0rem
+    font-size: 1.6rem
+    font-family: "Planelagos", sans-serif
+
+  h1, h2, h3, h4
+    font-size: 2.5rem
+    font-family: "Planelagos", sans-serif
+    font-weight: bold
+    margin: 0rem
+    margin-top: 1.5rem
+    color: #E3C800
+    text-align: left
+
+  img
+    float: left
+    align-items: center
+    flex-shrink: 0
+    margin: 1rem
+    max-width: 30%
+
+@font-face
+  font-family: "Planelagos"
+  font-weight: bold
+  src: local("Planelagos"), url("/assets/fonts/Planelagos.ttf")
+  font-display: swap
+
+@font-face
+  font-family: "RetroGaming"
+  font-weight: bold
+  src: local("RetroGaming"), url("/assets/fonts/RetroGaming.ttf")
+  font-display: swap
