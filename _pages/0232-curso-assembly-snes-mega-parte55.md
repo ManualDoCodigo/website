@@ -5,7 +5,7 @@ date: 2022/10/04
 type: video
 description: Neste episódio vamos começar a aprender mais a fundo os modos de endereçamento disponíveis no Snes e no Mega Drive. 
 entry_number: 232
-youtube_video_id: bv2FUVufVwY
+youtube_video_id: Rhr4z3auI68
 repository: "0232-curso-assembly-snes-mega-parte55"
 has_code: false
 has_p5: false
