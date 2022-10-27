@@ -1,9 +1,9 @@
 ---
 layout: page
-title: "O que são Modos de Endereçamento em Assembly?"
-date: 2022/10/04
+title: "O que é EXTENSÃO DE SINAL em Programação?"
+date: 2022/10/10
 type: video
-description: Neste episódio vamos começar a aprender mais a fundo os modos de endereçamento disponíveis no Snes e no Mega Drive. 
+description: Em programação é comum vermos o termo Sign Extension quando trabalhamos com código mais baixo nível, e muitas pessoas acabam não entendendo de fato o que acontece quando ocorre a extensão de sinal. 
 entry_number: 232
 youtube_video_id: Rhr4z3auI68
 repository: "0232-curso-assembly-snes-mega-parte55"
