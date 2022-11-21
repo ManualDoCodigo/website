@@ -5,7 +5,7 @@ date: 2022/10/04
 type: video
 description: Neste episódio vamos aprender sobre o modo de endereçamento absoluto da cpu 68000 do Mega Drive. 
 entry_number: 236
-youtube_video_id: bv2FUVufVwY
+youtube_video_id: 9t7X_qtfGD0
 repository: "0236-curso-assembly-snes-mega-parte56"
 has_code: false
 has_p5: false
@@ -39,7 +39,7 @@ No Snes também temos um modo na mesma linha do Absoluto que se chama *Direct Pa
 
 ## Do que se trata o modo Absoluto?
 
-A modo absoluto nada mais é do que você utilizar o próprio endereço absoluto em um parâmetro da instrução, como no exemplo abaixo:
+O modo absoluto nada mais é do que você utilizar o próprio endereço absoluto em um parâmetro da instrução, como no exemplo abaixo:
 
 {% capture _code %}{% highlight asm linenos=table %}
 move.w #$1234,$ff0000
