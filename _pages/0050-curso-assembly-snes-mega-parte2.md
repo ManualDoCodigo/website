@@ -33,6 +33,14 @@ Se quisermos ter uma noção mais alto nível do hardware é aí que entra o dia
 
 Com o diagrama de blocos conseguimos identificar os principais dispositivos e como eles estão conectados. Se quisermos ir mais a fundo aí podemos analisar os esquemáticos, explicado mais abaixo.
 
+<div class="info">
+<img src="/assets/img/icons/snes1.gif">
+<div style='display: block'>
+<h4>Diagrama de Blocos</h4>
+<p>Praticamente todas as placas que você for trabalhar tem um diagrama de blocos na documentação, pois ajuda a visualizar os blocos internos do hardware em mais alto nível. Sempre procure esse diagrama.</p>
+</div>
+</div>
+
 A figura abaixo mostra o diagrama de blocos do Snes.
 
 ![block diagram snes](/pages_data/{{page.repository}}/block-diagram-snes.jpg "Diagrama de blocos do Snes")
@@ -41,8 +49,16 @@ Analisando a imagem conseguimos identificar os principais elementos do Snes. Nas
 
 ## Barramentos
 
-O Snes possui 3 barramentos, sendo 2 de endereços, o A-Bus e o B-Bus, e um barramento de dados, o Data Bus.
+O Snes possui 3 barramentos, sendo 2 de endereços, o *A-Bus* e o *B-Bus*, e um barramento de dados, o *Data Bus*.
 Os barramentos são as conexões (fios) que ligam os diferentes elementos na placa.
+
+<div class="info">
+<img src="/assets/img/icons/megaman2.gif">
+<div style='display: block'>
+<h4>Barramentos</h4>
+<p>O conjunto dos fios que são relacionados entre si são os barramentos. Por exemplo, os 24 fios de endereços do Mega e do Snes são os barramentos de endereços de cada console.</p>
+</div>
+</div>
 
 Veremos em vídeos posteriores qual a função de cada barramento e como a troca de mensagens entres elementos ocorrem.
 
@@ -57,13 +73,13 @@ Mais pra frente no curso a Cpu será bem mais detalhada. Por enquanto temos que 
 
 ## Working Ram
 
-Essa é a memória Ram principal do Snes. Working Ram significa memória de trabalho, que é a memória de propósito geral disponível para o sistema. São como se fossem os chips de Ram que você instala em um computador. São 128KiB de memória, localizados nos bancos $7e e $7f (isso será explicado mais pra frente).
+Essa é a memória Ram principal do Snes. Working Ram significa memória de trabalho, que é a memória de propósito geral disponível para o sistema. São como se fossem os chips de Ram que você instala em um computador. São *128KiB* de memória, localizados nos bancos $7e e $7f (isso será explicado mais pra frente).
 
 Vemos que os três barramentos chegam na Wram.
 
 ## PPU (Picture Processing Unit)
 
-A PPU é o chip que processa os gráficos. Fisicamente são dois chips, porém do lado do programador enxergamos a PPU como uma entidade única, então o fato de ser dividida em dois chips não faz diferença pro assembly.
+A *PPU* é o chip que processa os gráficos. Fisicamente são dois chips, porém do lado do programador enxergamos a PPU como uma entidade única, então o fato de ser dividida em dois chips não faz diferença pro assembly.
 
 A Vram, que é a memória de vídeo, possui 64KiB de tamanho e serve para armazenar os elementos gráficos que são mostrados na televisão. A Vram é dividida em dois chips de 32KiB cada.
 
