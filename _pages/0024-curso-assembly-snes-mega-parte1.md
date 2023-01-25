@@ -12,6 +12,13 @@ has_p5: false
 tags: [Assembly, Snes, Mega Drive, Romhacking]
 playlists: [Curso de Assembly com Snes e Mega Drive]
 permalink: /curso-assembly-snes-mega-parte1/
+
+reference_links:
+ 
+contributions:
+  - title: "Adicione sua contribuição fazendo um pull request"
+    author: "Seu Nome"
+    url: "/contribuacomosite/"
 ---
 
 ## Introdução
@@ -21,6 +28,14 @@ Neste primeiro vídeo o objetivo é dar uma visão geral dos dois consoles, pois
 
 <img src="/pages_data/{{page.repository}}/snes.jpg" style="opacity:0.7;" alt="5a22"/>
 <img src="/pages_data/{{page.repository}}/megadrive.jpg" style="opacity:0.7;" alt="5a22"/>
+
+<div class="info">
+<img src="/assets/img/icons/snes1.gif">
+<div style='display: block'>
+<h4>Consoles Antigos</h4>
+<p>Os hardwares do Snes e do Mega possuem diferenças bem legais que nos ajudam a ilustrar diferentes conceitos no mundo da programação.</p>
+</div>
+</div>
 
 ## Processadores
 
