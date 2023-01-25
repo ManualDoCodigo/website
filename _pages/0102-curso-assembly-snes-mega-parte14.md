@@ -13,3 +13,7 @@ tags: [Assembly, Snes, Mega Drive, Romhacking, Cpu]
 playlists: [Curso de Assembly com Snes e Mega Drive]
 permalink: /curso-assembly-snes-mega-parte14/
 ---
+
+<img src="/pages_data/{{page.repository}}/cpu1.jpg" style="opacity:0.8; width:20%;"/>
+<img src="/pages_data/{{page.repository}}/cpu2.jpg" style="opacity:0.8; width:55%;"/>
+<img src="/pages_data/{{page.repository}}/cpu3.jpg" style="opacity:0.8; width:70%;"/>
