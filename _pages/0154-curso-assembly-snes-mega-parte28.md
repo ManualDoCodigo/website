@@ -13,3 +13,36 @@ tags: []
 playlists: [Curso de Assembly com Snes e Mega Drive]
 permalink: /curso-assembly-snes-mega-parte28/
 ---
+
+## Registradores do 68000
+
+<img src="/pages_data/{{page.repository}}/megareg1.jpg" style="opacity:0.8; width:100%;"/>
+
+## Registradores de Dados
+
+<img src="/pages_data/{{page.repository}}/megareg2.jpg" style="opacity:0.8; width:70%;"/>
+
+São de propósito geral.
+
+Permite manipulação de bytes, o que é útil para manipulação de texto.
+
+A manipulação de bytes, words e longwords se dá pelo uso dos sufixos ".b", ".w" e ".l", respectivamente.
+
+Quando um byte ou word é alterado, isso não modifica o restante do registrador.
+
+<img src="/pages_data/{{page.repository}}/megareg3.jpg" style="opacity:0.8; width:50%;"/>
+<img src="/pages_data/{{page.repository}}/megareg4.jpg" style="opacity:0.8; width:90%;"/>
+<img src="/pages_data/{{page.repository}}/megareg5.jpg" style="opacity:0.8; width:50%;"/>
+<img src="/pages_data/{{page.repository}}/megareg6.jpg" style="opacity:0.8; width:90%;"/>
+<img src="/pages_data/{{page.repository}}/megareg7.jpg" style="opacity:0.8; width:50%;"/>
+<img src="/pages_data/{{page.repository}}/megareg8.jpg" style="opacity:0.8; width:50%;"/>
+
+Quando fazemos uma operação com words em um registrador de endereços, ocorre extensão de sinal.
+
+<img src="/pages_data/{{page.repository}}/megareg9.jpg" style="opacity:0.8; width:60%;"/>
+
+## Pinos de Endereço
+
+<img src="/pages_data/{{page.repository}}/megareg10.jpg" style="opacity:0.8; width:80%;"/>
+
+<img src="/pages_data/{{page.repository}}/megareg11.jpg" style="opacity:0.8; width:50%;"/>
