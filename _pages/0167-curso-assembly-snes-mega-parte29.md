@@ -13,3 +13,9 @@ tags: []
 playlists: [Curso de Assembly com Snes e Mega Drive]
 permalink: /curso-assembly-snes-mega-parte29/
 ---
+
+<img src="/pages_data/{{page.repository}}/regsnes1.jpg" style="opacity:0.8; width:100%;"/>
+<img src="/pages_data/{{page.repository}}/regsnes2.jpg" style="opacity:0.8; width:100%;"/>
+<img src="/pages_data/{{page.repository}}/regsnes3.jpg" style="opacity:0.8; width:70%;"/>
+<img src="/pages_data/{{page.repository}}/regsnes4.jpg" style="opacity:0.8; width:100%;"/>
+<img src="/pages_data/{{page.repository}}/regsnes5.jpg" style="opacity:0.8; width:100%;"/>
