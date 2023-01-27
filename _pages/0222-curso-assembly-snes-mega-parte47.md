@@ -35,12 +35,13 @@ contributions:
     url: "/contribuacomosite/"
 ---
 
-### Introdução
+## Introdução
+<div>
+<img src="/assets/img/icons/mario1.gif" style="float: left">
+<p>Neste vídeo vou mostrar o ambiente de programação que iremos usar para a programação de consoles antigos no ano de 2022.</p>
 
-Neste vídeo vou mostrar o ambiente de programação que iremos usar para a programação de consoles antigos no ano de 2022.
-
-Esse setup será usado pelo menos durante o primeiro semestre, e posteriormente a isso farei um outro vídeo caso alterarmos alguma coisa no ambiente.
-
+<p>Esse setup será usado pelo menos durante o primeiro semestre, e posteriormente a isso farei um outro vídeo caso alterarmos alguma coisa no ambiente.</p>
+</div>
 
 ## Instalação do Assembler Bass
 
@@ -52,7 +53,13 @@ Para instalar o *Bass* temos primeiramente que baixar o último release do repos
 
 [https://github.com/Dgdiniz/bass/releases](https://github.com/Dgdiniz/bass/releases)
 
-No momento o último release é o *bass-doug-2022-02-07*, mas baixe o último que encontrar.
+<div class="info">
+<img src="/assets/img/icons/snes1.gif">
+<div style='display: block'>
+<h4>Versão do Bass</h4>
+<p>No momento o último release é o <em>bass-doug-2022-02-07</em>, mas baixe o último que encontrar.</p>
+</div>
+</div>
 
 Após descomprimir o pacote copie o arquivo *bass.exe*, que se encontra na pasta *bass/out* para uma pasta que seja visível no ***Path*** do sistema. Existem binários para Windows e Linux.
 
@@ -140,6 +147,14 @@ Se você quer utilizar o *Vim* ou o *Neovim* mas não tem muita experiência com
 
 Nesta playlist eu começo do zero, para quem é iniciante mesmo no Vim.
 
+<div class="info">
+<img src="/assets/img/icons/computer1.gif">
+<div style='display: block'>
+<h4>O Neovim serve pra programar?</h4>
+<p>O vim/neovim é um editor muito poderoso e fácil de configurar para o seu gosto. Sem falar que ele traz um sentimento retrô que combina muito com os consoles antigos.</p>
+</div>
+</div>
+
 Bom, supondo que você irá utilizar o Vim como editor para esta série, é necessário instalar dois plugins que se encontram na minha conta do *Github*:
 
 [https://github.com/dgdiniz/bass-syntax-vim](https://github.com/dgdiniz/bass-syntax-vim)
@@ -150,10 +165,11 @@ Os repositórios tem mais informações.
 
 Para instalar no Vim é só inserir os dois plugins conforme mostrado abaixo. Aqui estou usando o *Plug* como gerenciador de plugins.
 
-```
+{% capture _code %}{% highlight plain linenos=table %}
 Plug 'dgdiniz/bass-syntax-vim'
 Plug 'dgdiniz/bass-lsp', { 'do': 'npm install && npm link --force'  }
-```
+{% endhighlight %}{% endcapture %}{% include tools/fixlinenos.html %}
+{{ _code }}
 
 Depois é só rodar o comando *:PlugInstall* para instalar os plugins. Reinicie após a instalação.
 
@@ -163,10 +179,11 @@ Quando o *Lsp* for usado, é gerado um arquivo chamado *tempbasslsp.bin*. Este a
 
 Outra configuração interessante é fazer um *remap* no vim para rodar o script de build automaticamente, sem precisar abrir outro terminal ou rodar o script *.bat* manualmente. Para isso adiciona as seguintes linhas no seu arquivo de configuração do Vim ou Neovim:
 
-```
+{% capture _code %}{% highlight plain linenos=table %}
 " Assembly """""""""""""""""""
 nnoremap tb :!build-bsnes-plus
-```
+{% endhighlight %}{% endcapture %}{% include tools/fixlinenos.html %}
+{{ _code }}
 
 Aqui eu mapeei o comando *tb* para o comando *:!build-bsnes-plus*. Desta forma é só digitar *tb* e dar Enter e o script de build será executado automaticamente. Escolha a sequência que preferir, mas aqui estou seguindo o padrão que defini naquela série de Vim que tenho no canal. Se preferir troque o script para iniciar o debugger v086 ao invés do bsnes-plus.
 
@@ -201,9 +218,11 @@ No repositório do plugin é possível ver todos os detalhes.
 
 Também é possível usar apenas a extensão ***.asm*** e indicar dentro do arquivo qual o sistema que o Vim deve usar. Para isso é necessário colocar a seguinte linha no topo do arquivo:
 
-```
+{% capture _code %}{% highlight plain linenos=table %}
 // vim: ft=snes
-```
+{% endhighlight %}{% endcapture %}{% include tools/fixlinenos.html %}
+{{ _code }}
+
 O *ft* é o *filetype* e *snes* é o *syntax* que o Vim deve usar.
 
 Colocando a linha acima no topo do arquivo o Vim configura a extensão do arquivo para o nome indicado. Os valores permitidos na versão atual são *bass*, *snes*, *megadrive* e *nes*.
