@@ -10,7 +10,7 @@ repository: "0233"
 has_code: false
 has_p5: false
 tags: []
-playlists: [Curso de Assembly com Snes e Mega Drive]
+playlists: [Mini-Projetos e Algoritmos]
 permalink: /qr-code-xor/
 
 contributions:
