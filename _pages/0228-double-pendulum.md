@@ -10,7 +10,7 @@ repository: "0228"
 has_code: false
 has_p5: true
 tags: [pêndulo, p5, física, pêndulo duplo]
-playlists: [Rascunhos]
+playlists: [Mini-Projetos e Algoritmos]
 permalink: /pendulo-duplo/
 
 reference_links:
