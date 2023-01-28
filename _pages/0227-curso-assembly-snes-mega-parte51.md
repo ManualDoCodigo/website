@@ -1,11 +1,11 @@
 ---
 layout: page
-title: "Como fazer um IF/ELSE em ASSEMBLY no Snes e Mega Drive?"
-date: 2022/02/10
+title: "Como fazer um WHILE em ASSEMBLY de Snes?"
+date: 2022/07/04
 type: video
-description: Neste episódio começo a parte de branching em assembly. É com esse tipo de instrução que conseguimos fazer if, else, for, while, rotinas, etc.
+description: Neste episódio eu mostro como implementar um loop while em assembly. Faço o código usando assembly de Snes e mostro algumas variações possíveis desse loop e comparo com o loop for.
 entry_number: 227
-youtube_video_id: pYYPy8FjQ8E
+youtube_video_id: bH9_iV2xIv4
 repository: "0227-curso-assembly-snes-mega-parte51"
 has_code: false
 has_p5: false
