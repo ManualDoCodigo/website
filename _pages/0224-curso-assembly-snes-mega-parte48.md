@@ -1,7 +1,7 @@
 ---
 layout: page
 title: "Introdução aos PULOS em Assembly de Snes e Mega Drive."
-date: 2022/02/10
+date: 2022/03/24
 type: video
 description: Neste episódio começo a parte de branching em assembly. É com esse tipo de instrução que conseguimos fazer if, else, for, while, rotinas, etc.
 entry_number: 224
