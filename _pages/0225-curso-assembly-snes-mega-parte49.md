@@ -1,11 +1,11 @@
 ---
 layout: page
-title: "Como fazer um IF/ELSE em ASSEMBLY no Snes e Mega Drive?"
-date: 2022/02/10
+title: "Comparando coisas no SNES e no MEGA DRIVE."
+date: 2022/05/09
 type: video
-description: Neste episódio começo a parte de branching em assembly. É com esse tipo de instrução que conseguimos fazer if, else, for, while, rotinas, etc.
+description: Neste episódio falo sobre as instruções de comparação, que estão entre as mais importantes pra entender programação assembly.
 entry_number: 225
-youtube_video_id: pYYPy8FjQ8E
+youtube_video_id: 5ldeNV1cLM0
 repository: "0225-curso-assembly-snes-mega-parte49"
 has_code: false
 has_p5: false
