@@ -1,17 +1,17 @@
 ---
 layout: page
-title: "Fazendo um Algoritmo Basicão em Assembly de Mega Drive e SNES"
-date: 2022/02/10
+title: "Fazendo um Algoritmo em Assembly de SNES e MEGA DRIVE. Coisa Simples."
+date: 2022/08/29
 type: video
 description: Neste episódio vamos implementar um algoritmo simples em assembly de Snes. Vamos criar uma lista de números aleatórios e vamos varrer esta lista tentando encontrar um número passado como parâmetro. 
 entry_number: 230
-youtube_video_id: qUaQ0au_B9U
+youtube_video_id: BfT-WkNNVv8
 repository: "0230-curso-assembly-snes-mega-parte53"
 has_code: false
 has_p5: false
 tags: []
 playlists: [Curso de Assembly com Snes e Mega Drive]
-permalink: /curso-assembly-snes-mega-parte51/
+permalink: /curso-assembly-snes-mega-parte53/
 
 contributions:
   - title: "Adicione sua contribuição fazendo um pull request"
