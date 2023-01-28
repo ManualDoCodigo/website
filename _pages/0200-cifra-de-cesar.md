@@ -14,6 +14,32 @@ playlists: [Questões de Entrevista]
 permalink: /cifra-de-cesar/
 ---
 
+## Questão
+
+Neste episódio vamos aprender sobre a cifra de César. Este é um algoritmo muito simples para a criptografia de uma mensagem de texto. Abaixo temos o enunciado do algoritmo que vamos implementar.
+
+<div class="info">
+<img src="/assets/img/icons/computer1.gif">
+<div style='display: block'>
+<h4>Cifra de Cesar</h4>
+<p>Dado uma string não vazia de caracteres minúsculos e uma chave numérica com valor maior igual a zero, escreva uma função que retorne uma nova string obtida fazendo o shift de cada letra da string de entrada em <em>k</em> posições no alfabeto, onde <em>k</em> é a chave.</p>
+</div>
+</div>
+
+Em outras palavras, some o número da chave em cada letra da string de entrada. Por exemplo, se a chave for 3, a letra *a* se torna *d*, a letra *b* se torna *e*, e assim por diante. Você pode assumir que a string de entrada só contém letras minúsculas.
+
+## Dicas
+
+- Não se esqueça de tratar o caso em que a soma da chave com a letra ultrapasse o valor *z*, neste caso você deve voltar para o início do alfabeto, ou seja, *a*.
+
+- Entenda como a codificação de caracteres funciona, como a tabela ASCII.
+
+- O que acontece se o valor da chave for maior que o tamanho do alfabeto? 
+
+- Estude a operação de módulo.
+
+## Solução
+
 {% capture _code %}{% highlight python linenos=table %}
 #Time: O(n) - Space O(1)
 def cesarCipherEncryption(message, key):
