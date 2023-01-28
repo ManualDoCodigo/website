@@ -1,11 +1,11 @@
 ---
 layout: page
-title: "Como fazer um IF/ELSE em ASSEMBLY no Snes e Mega Drive?"
-date: 2022/02/10
+title: "Como fazer um LOOP FOR em Assembly de MEGA DRIVE e SNES?"
+date: 2022/08/16
 type: video
-description: Neste episódio mostro como fazer um if/else em assembly de Snes e Mega Drive e explico as variações existentes. 
+description: Neste episódio mostro como fazer um loop for em assembly de Mega Drive. Mostro como implementar o loop for usando instruções mais comuns que existem em todas as Cpus e também mostro como utilizar algumas instruções mais dedicadas para loops que existem na Cpu 68000 da Motorola.
 entry_number: 229
-youtube_video_id: qUaQ0au_B9U
+youtube_video_id: q168yUeQ_es
 repository: "0229-curso-assembly-snes-mega-parte52"
 has_code: false
 has_p5: false
