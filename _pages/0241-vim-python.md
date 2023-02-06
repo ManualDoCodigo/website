@@ -5,7 +5,7 @@ date: 2023/02/30
 type: video
 description: Neste video mostro como configurar o Vim e o Neovim para programação em Python. Mostro como instalar um linter e fixer para adicionar várias funcionalidades para programação em Python.
 entry_number: 241
-youtube_video_id: kfQcJOJeyQg
+youtube_video_id: 6gXuNvSsIkQ
 repository: "0241"
 has_code: false
 has_p5: false
