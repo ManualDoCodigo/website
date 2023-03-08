@@ -1,5 +1,7 @@
 # Manual do Código
 
+[www.manualdocodigo.com.br](www.manualdocodigo.com.br)
+
 Este é o repositório com o site completo do canal [Manual do Código](youtube.com/manualdocodigo) no YouTube onde coloco todo os textos, informações e dados extras de todos os meus projetos e vídeos.
 
 A ideia do site é disseminar conteúdo interessante sobre programação para quem tem interesse na área, misturando temas divertidos nos projetos de programação para que o aprendizado fique mais prazeroso.
