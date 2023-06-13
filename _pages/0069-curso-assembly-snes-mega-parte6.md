@@ -24,7 +24,7 @@ Vamos considerar aqui apenas memórias do tipo *NOR*, que são paralelas e cont�
 
 ### Conexões das memórias
 
-Vamos tomar como exemplo uma memória de 64KiB de tamanho.
+Vamos tomar como exemplo uma memória de 64KiB.
 
 Como a memória tem 64KiB, precisamos de 16 bits para endereçar todos os bytes da memória. Então a memória tem que ter 16 *pinos de endereço*, pois 16 fios do barramento devem entrar na memória para indicar qual byte da memória será acessado.
 
