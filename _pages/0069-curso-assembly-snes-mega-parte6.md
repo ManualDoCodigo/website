@@ -18,7 +18,7 @@ permalink: /curso-assembly-snes-mega-parte6/
 
 Nesta parte 6 do curso vamos ver como os chips de memória funcionam. Isso é importante para vários aspectos que veremos no futuro. Entender isso vai nos ajudar a entender melhor como os consoles e cartuchos funcionam e também alguns detalhes legais, por exemplo, como alguns jogos fazem *Bank Switching*, como o Phantasy Star 4 do Mega Drive.
 
-Também ajuda a entender melhor como o hardware funciona e porque os sistemas síncronos com clock são utilizados na prática, o que será o assunto na próxima parte do curso.
+Também ajuda a entender melhor como o hardware funciona e porque os sistemas síncronos com Clock são utilizados na prática, o que será o assunto na próxima parte do curso.
 
 Vamos considerar aqui apenas memórias do tipo *NOR*, que são paralelas e contém todos os pinos de endereço e de dados. Não vou falar de memórias NAND, que são seriais e não eram usadas na época do Snes e do Mega. Na verdade, alguns cartuchos usaram memórias seriais, mas falarei disso em um vídeo futuro.
 
@@ -93,4 +93,4 @@ Por exemplo, imagine que os pinos */CE* e */RD* estejam em 0. Neste caso o chip 
 
 O efeito é pior no caso das gravações, pois se o valor do endereço não estiver estabilizado no momento em que os pinos */CE* e */WR* estiverem em 0, o chip sairá alterando os bytes internos conforme o que os pinos de endereço estiverem indicando. Isso pode ser catastrófico.
 
-Portanto, na prática, os endereços são inseridos em um ciclo de clock e os pinos de controle são setados no próximo ciclo, o que garante que os pinos de endereço estão estabilizados. *Os pinos do chip não podem ser setados todos de uma vez. Os pinos de endereço e dados tem que ser setados antes dos pinos de controle.*
+Portanto, na prática, os endereços são inseridos em um ciclo de Clock e os pinos de controle são setados no próximo ciclo, o que garante que os pinos de endereço estão estabilizados. *Os pinos do chip não podem ser setados todos de uma vez. Os pinos de endereço e dados tem que ser setados antes dos pinos de controle.*
