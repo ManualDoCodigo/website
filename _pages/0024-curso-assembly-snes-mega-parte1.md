@@ -1,9 +1,9 @@
 ---
 layout: page
-title: "Curso de Programação Assembly com Snes e Mega Drive. Parte 1"
+title: "Aprendendo PROGRAMAÇÃO com Consoles Antigos. O Início."
 date: 2020-05-11
 type: video
-description: Este é o primeiro vídeo de uma série onde estudaremos Assembly utilizando os videogames Snes e Mega Drive.
+description: Este é o primeiro vídeo de uma série onde estudaremos programação utilizando consoles antigos, principalmente o Snes e o Mega Drive.
 entry_number: 24
 youtube_video_id: WoOVbPnpyjk
 repository: 0024-curso-assembly-snes-mega-parte1
